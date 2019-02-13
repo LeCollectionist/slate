@@ -334,3 +334,58 @@ The possible the sections are:
 
 `GET http://example.com/api/v1/houses/1/sections/outdoor_and_recreation`
 
+## Get Prices
+<span class='badge badge-bleu'>Paginated</span>
+
+> Response:
+
+```json
+{
+  "data": [
+    {
+      "id": "4567",
+      "type": "price",
+      "attributes": {
+        "houseId": 7,
+        "contractPrice": 5700,
+        "currency": "EUR",
+        "day": "2018-01-01",
+        "fee": "0.25",
+        "ownerPrice": 4560,
+        "publicPrice": 5700,
+        "taxesAndCharges": "0.0"
+      }
+    },
+    ...
+    {
+      "id": "5678",
+      "type": "price",
+      "attributes": {
+        "houseId": 7,
+        "contractPrice": 3286,
+        "currency": "EUR",
+        "day": "2018-01-25",
+        "fee": "0.25",
+        "ownerPrice": 2629,
+        "publicPrice": 3286,
+        "taxesAndCharges": "0.0"
+      }
+    }
+  ],
+  "meta": {
+    "current_page": 1,
+    "next_page": 2,
+    "per_page": 25,
+    "prev_page": null,
+    "total_pages": 46,
+    "total_count": 1128
+  }
+}
+```
+
+This endpoint retrieves all the prices of the house.
+
+### HTTP Request
+
+`GET http://example.com/api/v1/houses/7/prices`
+
