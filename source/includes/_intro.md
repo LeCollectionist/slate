@@ -53,3 +53,5 @@ Parameter | Description | Example | Default
 per | Split the resources by the indicated number | `per=10` | `25`
 page | Choose the page of the paginated resources | `page=3` | `1`
 
+Note: The `page` params can also have the value `all` (`page=all`).
+In this case, it will respond with the entire collection.
