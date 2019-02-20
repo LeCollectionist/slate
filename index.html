@@ -224,6 +224,9 @@
                   <li>
                     <a href="#pagination" class="toc-h2 toc-link" data-title="Pagination">Pagination</a>
                   </li>
+                  <li>
+                    <a href="#localization" class="toc-h2 toc-link" data-title="Localization">Localization</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -275,7 +278,7 @@
 </span></code></pre>
 <p>Le Collectionist API show the errors with the <code>errors</code> base key.</p>
 <h3 id='pagination'>Pagination</h3>
-<p><span class='badge badge-bleu'>Paginated</span></p>
+<p><span class='badge badge-blue'>Paginated</span></p>
 
 <blockquote>
 <p>All the paginated ressources comes with the meta base key:</p>
@@ -323,8 +326,20 @@ It allows you to pass few more arguments to the endpoints.</p>
 
 <p>Note: The <code>page</code> params can also have the value <code>all</code> (<code>page=all</code>).
 In this case, it will respond with the entire collection.</p>
+<h3 id='localization'>Localization</h3>
+<p><span class='badge badge-green'>Localized</span></p>
+
+<p>This label means the resouces are translated on the requested locale.</p>
+
+<p>The current available locales are:</p>
+
+<ul>
+<li>en</li>
+<li>fr</li>
+</ul>
 <h1 id='houses'>Houses</h1><h2 id='get-all'>Get All</h2>
-<p><span class='badge badge-bleu'>Paginated</span></p>
+<p><span class='badge badge-blue'>Paginated</span>
+<span class='badge badge-green'>Localized</span></p>
 
 <blockquote>
 <p>Response:</p>
@@ -336,10 +351,7 @@ In this case, it will respond with the entire collection.</p>
       </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"house"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Appartement 1"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"appartement-1"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"appartement-1"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"appartement-fr"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"firstPhotoUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url-of-the-img-appartement"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
@@ -348,10 +360,7 @@ In this case, it will respond with the entire collection.</p>
       </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"house"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Villa 878"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"villa-878"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"villa-878"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"villa-878"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"firstPhotoUrl"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -367,11 +376,11 @@ In this case, it will respond with the entire collection.</p>
 </span></code></pre>
 <p>This endpoint retrieves all the available houses.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/v1/houses</code></p>
+<p><code>GET http://example.com/fr/api/v1/houses</code></p>
 
-<p><code>GET http://example.com/api/v1/houses?ids=24,878</code></p>
+<p><code>GET http://example.com/fr/api/v1/houses?ids=24,878</code></p>
 
-<p><code>GET http://example.com/api/v1/houses?ids[]=24&amp;ids[]=878</code></p>
+<p><code>GET http://example.com/fr/api/v1/houses?ids[]=24&amp;ids[]=878</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -398,28 +407,16 @@ In this case, it will respond with the entire collection.</p>
       </span><span class="s2">"bathrooms"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
       </span><span class="s2">"bedrooms"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
       </span><span class="s2">"capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This peaceful getaway ..."</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Îlot de tranquillité, il est loin du tumulte .."</span><span class="w">
-      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Îlot de tranquillité, il est loin du tumulte .."</span><span class="p">,</span><span class="w">
       </span><span class="s2">"domainSurface"</span><span class="p">:</span><span class="w"> </span><span class="mi">90000</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"leadText"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Chalet LC is an authentic ..."</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Le chalet LC est un alpage ... "</span><span class="w">
-      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"leadText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Le chalet LC est un alpage ... "</span><span class="p">,</span><span class="w">
       </span><span class="s2">"gpslatitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"47.45678"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"gpslongitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4.456789"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Chalet LC"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"chalet-lc"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"chalet-lc"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"chalet-lc"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"published"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"surface"</span><span class="p">:</span><span class="w"> </span><span class="mi">450</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"surrounding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Located just a few kilometres ..."</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"À juste quelques kilomètres de la station mythique de Megève,.."</span><span class="w">
-      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"surrounding"</span><span class="p">:</span><span class="w"> </span><span class="s2">"À juste quelques kilomètres de la station mythique de Megève,.."</span><span class="p">,</span><span class="w">
       </span><span class="s2">"firstPhotoUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"first-photo-url"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
@@ -427,9 +424,10 @@ In this case, it will respond with the entire collection.</p>
 </span></code></pre>
 <p>This endpoint retrieves an available house.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/api/v1/houses/1</code></p>
+<p><code>GET http://example.com/fr/api/v1/houses/1</code></p>
 <h2 id='get-starred-tags'>Get Starred tags</h2>
-<p><span class='badge badge-bleu'>Paginated</span></p>
+<p><span class='badge badge-blue'>Paginated</span>
+<span class='badge badge-green'>Localized</span></p>
 
 <blockquote>
 <p>Response:</p>
@@ -441,10 +439,7 @@ In this case, it will respond with the entire collection.</p>
       </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tag"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"isVisible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ski closet and shoe heaters"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Local à ski et chauffe chaussures"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Local à ski et chauffe chaussures"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"photo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url-of-the-tag"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
@@ -454,10 +449,7 @@ In this case, it will respond with the entire collection.</p>
       </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tag"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"isVisible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Wine cellar"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cave à vin"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cave à vin"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"photo"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -474,9 +466,10 @@ In this case, it will respond with the entire collection.</p>
 </span></code></pre>
 <p>This endpoint retrieves all the starred tags of a house.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET http://example.com/api/v1/houses/1/starrings</code></p>
+<p><code>GET http://example.com/fr/api/v1/houses/1/starrings</code></p>
 <h2 id='get-experiences'>Get Experiences</h2>
-<p><span class='badge badge-bleu'>Paginated</span></p>
+<p><span class='badge badge-blue'>Paginated</span>
+<span class='badge badge-green'>Localized</span></p>
 
 <blockquote>
 <p>Response:</p>
@@ -487,22 +480,10 @@ In this case, it will respond with the entire collection.</p>
       </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"191"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"activity"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cross the vast territory ..."</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arpentez le large territoire du Mont ..."</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"leadText"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Play the musher apprentice"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jouer les apprentis musher"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
+        </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arpentez le large territoire du Mont ..."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"leadText"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jouer les apprentis musher"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="err">...</span><span class="w">
@@ -510,22 +491,10 @@ In this case, it will respond with the entire collection.</p>
       </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"197"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"activity"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Become a night owl and ski the slopes..."</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Devenez un oiseau de nuit en parcourant..."</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"leadText"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Explore the ski resorts at night"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Explorer les stations de ski la nuit"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
+        </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Devenez un oiseau de nuit en parcourant..."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"leadText"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Explorer les stations de ski la nuit"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
@@ -541,9 +510,10 @@ In this case, it will respond with the entire collection.</p>
 </span></code></pre>
 <p>This endpoint retrieves all the experiences of the destination&#39;s house.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>GET http://example.com/api/v1/houses/1/experiences</code></p>
+<p><code>GET http://example.com/fr/api/v1/houses/1/experiences</code></p>
 <h2 id='get-tag-39-s-group-by-section'>Get Tag&#39;s Group by Section</h2>
-<p><span class='badge badge-bleu'>Paginated</span></p>
+<p><span class='badge badge-blue'>Paginated</span>
+<span class='badge badge-green'>Localized</span></p>
 
 <blockquote>
 <p>Response:</p>
@@ -554,10 +524,7 @@ In this case, it will respond with the entire collection.</p>
       </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"79"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Office"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bureau"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bureau"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
         </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
           </span><span class="p">{</span><span class="w">
@@ -565,10 +532,7 @@ In this case, it will respond with the entire collection.</p>
             </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tag"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
               </span><span class="s2">"isVisible"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Table"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Table"</span><span class="w">
-              </span><span class="p">},</span><span class="w">
+              </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Table"</span><span class="p">,</span><span class="w">
               </span><span class="s2">"photo"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
             </span><span class="p">}</span><span class="w">
           </span><span class="p">},</span><span class="w">
@@ -578,10 +542,7 @@ In this case, it will respond with the entire collection.</p>
             </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tag"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
               </span><span class="s2">"isVisible"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Landline phone"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Téléphone"</span><span class="w">
-              </span><span class="p">},</span><span class="w">
+              </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Téléphone"</span><span class="p">,</span><span class="w">
               </span><span class="s2">"photo"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
             </span><span class="p">}</span><span class="w">
           </span><span class="p">}</span><span class="w">
@@ -592,10 +553,7 @@ In this case, it will respond with the entire collection.</p>
       </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dining room"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Salle à manger"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Salle à manger"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
         </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
           </span><span class="p">{</span><span class="w">
@@ -603,10 +561,7 @@ In this case, it will respond with the entire collection.</p>
             </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tag"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
               </span><span class="s2">"isVisible"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Seats"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nombre de personnes assises"</span><span class="w">
-              </span><span class="p">},</span><span class="w">
+              </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nombre de personnes assises"</span><span class="p">,</span><span class="w">
               </span><span class="s2">"photo"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
             </span><span class="p">}</span><span class="w">
           </span><span class="p">},</span><span class="w">
@@ -637,17 +592,18 @@ In this case, it will respond with the entire collection.</p>
 <li>outdoor_and_recreation</li>
 </ul>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>GET http://example.com/api/v1/houses/1/sections/rooms</code></p>
+<p><code>GET http://example.com/fr/api/v1/houses/1/sections/rooms</code></p>
 
-<p><code>GET http://example.com/api/v1/houses/1/sections/location</code></p>
+<p><code>GET http://example.com/fr/api/v1/houses/1/sections/location</code></p>
 
-<p><code>GET http://example.com/api/v1/houses/1/sections/essentials</code></p>
+<p><code>GET http://example.com/fr/api/v1/houses/1/sections/essentials</code></p>
 
-<p><code>GET http://example.com/api/v1/houses/1/sections/amenities</code></p>
+<p><code>GET http://example.com/fr/api/v1/houses/1/sections/amenities</code></p>
 
-<p><code>GET http://example.com/api/v1/houses/1/sections/outdoor_and_recreation</code></p>
+<p><code>GET http://example.com/fr/api/v1/houses/1/sections/outdoor_and_recreation</code></p>
 <h2 id='get-prices'>Get Prices</h2>
-<p><span class='badge badge-bleu'>Paginated</span></p>
+<p><span class='badge badge-bleu'>Paginated</span>
+<span class='badge badge-bleu'>Localized</span></p>
 
 <blockquote>
 <p>Response:</p>
@@ -696,7 +652,7 @@ In this case, it will respond with the entire collection.</p>
 </span></code></pre>
 <p>This endpoint retrieves all the prices of the house.</p>
 <h3 id='http-request-6'>HTTP Request</h3>
-<p><code>GET http://example.com/api/v1/houses/7/prices</code></p>
+<p><code>GET http://example.com/fr/api/v1/houses/7/prices</code></p>
 
       </div>
       <div class="dark-box">
