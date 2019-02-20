@@ -1,7 +1,8 @@
 # Houses
 
 ## Get All
-<span class='badge badge-bleu'>Paginated</span>
+<span class='badge badge-blue'>Paginated</span>
+<span class='badge badge-green'>Localized</span>
 
 > Response:
 
@@ -13,10 +14,7 @@
       "type": "house",
       "attributes": {
         "name": "Appartement 1",
-        "slug": {
-          "en": "appartement-1",
-          "fr": "appartement-1"
-        },
+        "slug": "appartement-fr",
         "firstPhotoUrl": "url-of-the-img-appartement"
       }
     },
@@ -25,10 +23,7 @@
       "type": "house",
       "attributes": {
         "name": "Villa 878",
-        "slug": {
-          "en": "villa-878",
-          "fr": "villa-878"
-        },
+        "slug": "villa-878",
         "firstPhotoUrl": null
       }
     }
@@ -47,11 +42,11 @@ This endpoint retrieves all the available houses.
 
 ### HTTP Request
 
-`GET http://example.com/api/v1/houses`
+`GET http://example.com/fr/api/v1/houses`
 
-`GET http://example.com/api/v1/houses?ids=24,878`
+`GET http://example.com/fr/api/v1/houses?ids=24,878`
 
-`GET http://example.com/api/v1/houses?ids[]=24&ids[]=878`
+`GET http://example.com/fr/api/v1/houses?ids[]=24&ids[]=878`
 
 ### Query Parameters
 
@@ -72,28 +67,16 @@ ids | List of specific house id | `ids=24,878`
       "bathrooms": 5,
       "bedrooms": 7,
       "capacity": 14,
-      "description": {
-        "en": "This peaceful getaway ...",
-        "fr": "Îlot de tranquillité, il est loin du tumulte .."
-      },
+      "description": "Îlot de tranquillité, il est loin du tumulte ..",
       "domainSurface": 90000,
-      "leadText": {
-        "en": "Chalet LC is an authentic ...",
-        "fr": "Le chalet LC est un alpage ... "
-      },
+      "leadText": "Le chalet LC est un alpage ... ",
       "gpslatitude": "47.45678",
       "gpslongitude": "4.456789",
       "name": "Chalet LC",
-      "slug": {
-        "en": "chalet-lc",
-        "fr": "chalet-lc"
-      },
+      "slug": "chalet-lc",
       "state": "published",
       "surface": 450,
-      "surrounding": {
-        "en": "Located just a few kilometres ...",
-        "fr": "À juste quelques kilomètres de la station mythique de Megève,.."
-      },
+      "surrounding": "À juste quelques kilomètres de la station mythique de Megève,..",
       "firstPhotoUrl": "first-photo-url"
     }
   }
@@ -104,10 +87,11 @@ This endpoint retrieves an available house.
 
 ### HTTP Request
 
-`GET http://example.com/api/v1/houses/1`
+`GET http://example.com/fr/api/v1/houses/1`
 
 ## Get Starred tags
-<span class='badge badge-bleu'>Paginated</span>
+<span class='badge badge-blue'>Paginated</span>
+<span class='badge badge-green'>Localized</span>
 
 > Response:
 
@@ -119,10 +103,7 @@ This endpoint retrieves an available house.
       "type": "tag",
       "attributes": {
         "isVisible": true,
-        "name": {
-          "en": "Ski closet and shoe heaters",
-          "fr": "Local à ski et chauffe chaussures"
-        },
+        "name": "Local à ski et chauffe chaussures",
         "photo": "url-of-the-tag"
       }
     },
@@ -132,10 +113,7 @@ This endpoint retrieves an available house.
       "type": "tag",
       "attributes": {
         "isVisible": true,
-        "name": {
-          "en": "Wine cellar",
-          "fr": "Cave à vin"
-        },
+        "name": "Cave à vin",
         "photo": null
       }
     }
@@ -155,10 +133,11 @@ This endpoint retrieves all the starred tags of a house.
 
 ### HTTP Request
 
-`GET http://example.com/api/v1/houses/1/starrings`
+`GET http://example.com/fr/api/v1/houses/1/starrings`
 
 ## Get Experiences
-<span class='badge badge-bleu'>Paginated</span>
+<span class='badge badge-blue'>Paginated</span>
+<span class='badge badge-green'>Localized</span>
 
 > Response:
 
@@ -169,22 +148,10 @@ This endpoint retrieves all the starred tags of a house.
       "id": "191",
       "type": "activity",
       "attributes": {
-        "address": {
-          "en": null,
-          "fr": null
-        },
-        "description": {
-          "en": "Cross the vast territory ...",
-          "fr": "Arpentez le large territoire du Mont ..."
-        },
-        "leadText": {
-          "en": "",
-          "fr": ""
-        },
-        "name": {
-          "en": "Play the musher apprentice",
-          "fr": "Jouer les apprentis musher"
-        }
+        "address": null,
+        "description": "Arpentez le large territoire du Mont ...",
+        "leadText": "",
+        "name": "Jouer les apprentis musher"
       }
     },
     ...
@@ -192,22 +159,10 @@ This endpoint retrieves all the starred tags of a house.
       "id": "197",
       "type": "activity",
       "attributes": {
-        "address": {
-          "en": null,
-          "fr": null
-        },
-        "description": {
-          "en": "Become a night owl and ski the slopes...",
-          "fr": "Devenez un oiseau de nuit en parcourant..."
-        },
-        "leadText": {
-          "en": "",
-          "fr": ""
-        },
-        "name": {
-          "en": "Explore the ski resorts at night",
-          "fr": "Explorer les stations de ski la nuit"
-        }
+        "address": null,
+        "description": "Devenez un oiseau de nuit en parcourant...",
+        "leadText": "",
+        "name": "Explorer les stations de ski la nuit"
       }
     }
   ],
@@ -226,10 +181,11 @@ This endpoint retrieves all the experiences of the destination's house.
 
 ### HTTP Request
 
-`GET http://example.com/api/v1/houses/1/experiences`
+`GET http://example.com/fr/api/v1/houses/1/experiences`
 
 ## Get Tag's Group by Section
-<span class='badge badge-bleu'>Paginated</span>
+<span class='badge badge-blue'>Paginated</span>
+<span class='badge badge-green'>Localized</span>
 
 > Response:
 
@@ -240,10 +196,7 @@ This endpoint retrieves all the experiences of the destination's house.
       "id": "79",
       "type": "group",
       "attributes": {
-        "name": {
-          "en": "Office",
-          "fr": "Bureau"
-        },
+        "name": "Bureau",
         "position": 18,
         "tags": [
           {
@@ -251,10 +204,7 @@ This endpoint retrieves all the experiences of the destination's house.
             "type": "tag",
             "attributes": {
               "isVisible": false,
-              "name": {
-                "en": "Table",
-                "fr": "Table"
-              },
+              "name": "Table",
               "photo": null
             }
           },
@@ -264,10 +214,7 @@ This endpoint retrieves all the experiences of the destination's house.
             "type": "tag",
             "attributes": {
               "isVisible": false,
-              "name": {
-                "en": "Landline phone",
-                "fr": "Téléphone"
-              },
+              "name": "Téléphone",
               "photo": null
             }
           }
@@ -278,10 +225,7 @@ This endpoint retrieves all the experiences of the destination's house.
       "id": "16",
       "type": "group",
       "attributes": {
-        "name": {
-          "en": "Dining room",
-          "fr": "Salle à manger"
-        },
+        "name": "Salle à manger",
         "position": 3,
         "tags": [
           {
@@ -289,10 +233,7 @@ This endpoint retrieves all the experiences of the destination's house.
             "type": "tag",
             "attributes": {
               "isVisible": false,
-              "name": {
-                "en": "Seats",
-                "fr": "Nombre de personnes assises"
-              },
+              "name": "Nombre de personnes assises",
               "photo": null
             }
           },
@@ -324,18 +265,19 @@ The possible the sections are:
 
 ### HTTP Request
 
-`GET http://example.com/api/v1/houses/1/sections/rooms`
+`GET http://example.com/fr/api/v1/houses/1/sections/rooms`
 
-`GET http://example.com/api/v1/houses/1/sections/location`
+`GET http://example.com/fr/api/v1/houses/1/sections/location`
 
-`GET http://example.com/api/v1/houses/1/sections/essentials`
+`GET http://example.com/fr/api/v1/houses/1/sections/essentials`
 
-`GET http://example.com/api/v1/houses/1/sections/amenities`
+`GET http://example.com/fr/api/v1/houses/1/sections/amenities`
 
-`GET http://example.com/api/v1/houses/1/sections/outdoor_and_recreation`
+`GET http://example.com/fr/api/v1/houses/1/sections/outdoor_and_recreation`
 
 ## Get Prices
 <span class='badge badge-bleu'>Paginated</span>
+<span class='badge badge-bleu'>Localized</span>
 
 > Response:
 
@@ -387,5 +329,5 @@ This endpoint retrieves all the prices of the house.
 
 ### HTTP Request
 
-`GET http://example.com/api/v1/houses/7/prices`
+`GET http://example.com/fr/api/v1/houses/7/prices`
 

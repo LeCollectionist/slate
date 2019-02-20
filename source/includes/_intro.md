@@ -23,7 +23,7 @@ Le Collectionist API show the errors with the `errors` base key.
 
 
 ### Pagination
-<span class='badge badge-bleu'>Paginated</span>
+<span class='badge badge-blue'>Paginated</span>
 
 > All the paginated ressources comes with the meta base key:
 
@@ -55,3 +55,13 @@ page | Choose the page of the paginated resources | `page=3` | `1`
 
 Note: The `page` params can also have the value `all` (`page=all`).
 In this case, it will respond with the entire collection.
+
+### Localization
+<span class='badge badge-green'>Localized</span>
+
+This label means the resouces are translated on the requested locale.
+
+The current available locales are:
+
++ en
++ fr
