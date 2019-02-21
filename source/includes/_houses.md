@@ -1,12 +1,12 @@
 # Houses
 
-For all this endpoints, the `:identifier` can be the `:id` or the localized `slug` of the house.
+For all this endpoints, the `:identifier` can be the `id` or the localized `slug` of the house.
 
 For example:
 
-`GET http://example.com/fr/api/v1/houses/1`
+`GET /fr/api/v1/houses/1`
 
-`GET http://example.com/fr/api/v1/houses/chalet-megeve`
+`GET /fr/api/v1/houses/chalet-megeve`
 
 ## Get All
 <span class='badge badge-blue'>Paginated</span>
@@ -50,11 +50,11 @@ This endpoint retrieves all the available houses.
 
 ### HTTP Request
 
-`GET http://example.com/fr/api/v1/houses`
+`GET /fr/api/v1/houses`
 
-`GET http://example.com/fr/api/v1/houses?ids=24,878`
+`GET /fr/api/v1/houses?ids=24,878`
 
-`GET http://example.com/fr/api/v1/houses?ids[]=24&ids[]=878`
+`GET /fr/api/v1/houses?ids[]=24&ids[]=878`
 
 ### Query Parameters
 
@@ -95,7 +95,7 @@ This endpoint retrieves an available house.
 
 ### HTTP Request
 
-`GET http://example.com/fr/api/v1/houses/:identifier`
+`GET /fr/api/v1/houses/:identifier`
 
 ## Get Starred tags
 <span class='badge badge-blue'>Paginated</span>
@@ -141,7 +141,7 @@ This endpoint retrieves all the starred tags of a house.
 
 ### HTTP Request
 
-`GET http://example.com/fr/api/v1/houses/:identifier/starrings`
+`GET /fr/api/v1/houses/:identifier/starrings`
 
 ## Get Experiences
 <span class='badge badge-blue'>Paginated</span>
@@ -189,7 +189,7 @@ This endpoint retrieves all the experiences of the destination's house.
 
 ### HTTP Request
 
-`GET http://example.com/fr/api/v1/houses/:identifier/experiences`
+`GET /fr/api/v1/houses/:identifier/experiences`
 
 ## Get Tag's Group by Section
 <span class='badge badge-blue'>Paginated</span>
@@ -273,15 +273,15 @@ The possible the sections are:
 
 ### HTTP Request
 
-`GET http://example.com/fr/api/v1/houses/:identifier/sections/rooms`
+`GET /fr/api/v1/houses/:identifier/sections/rooms`
 
-`GET http://example.com/fr/api/v1/houses/:identifier/sections/location`
+`GET /fr/api/v1/houses/:identifier/sections/location`
 
-`GET http://example.com/fr/api/v1/houses/:identifier/sections/essentials`
+`GET /fr/api/v1/houses/:identifier/sections/essentials`
 
-`GET http://example.com/fr/api/v1/houses/:identifier/sections/amenities`
+`GET /fr/api/v1/houses/:identifier/sections/amenities`
 
-`GET http://example.com/fr/api/v1/houses/:identifier/sections/outdoor_and_recreation`
+`GET /fr/api/v1/houses/:identifier/sections/outdoor_and_recreation`
 
 ## Get Prices
 <span class='badge badge-bleu'>Paginated</span>
@@ -337,5 +337,5 @@ This endpoint retrieves all the prices of the house.
 
 ### HTTP Request
 
-`GET http://example.com/fr/api/v1/houses/:identifier/prices`
+`GET /fr/api/v1/houses/:identifier/prices`
 

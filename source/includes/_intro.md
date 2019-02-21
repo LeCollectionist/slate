@@ -6,6 +6,11 @@ This API uses REST endpoints and returns JSON.
 
 The response base keys are `data`, `meta` or `errors`.
 
+The API is hosted on:
+
++ Staging: `https://staging-michelangelo.herokuapp.com`
++ Prod: `https://prod-michelangelo.herokuapp.com`
+
 ### Errors
 
 > An example:
