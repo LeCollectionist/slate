@@ -266,6 +266,13 @@
 <p>This API uses REST endpoints and returns JSON.</p>
 
 <p>The response base keys are <code>data</code>, <code>meta</code> or <code>errors</code>.</p>
+
+<p>The API is hosted on:</p>
+
+<ul>
+<li>Staging: <code>https://staging-michelangelo.herokuapp.com</code></li>
+<li>Prod: <code>https://prod-michelangelo.herokuapp.com</code></li>
+</ul>
 <h3 id='errors'>Errors</h3>
 <blockquote>
 <p>An example:</p>
@@ -338,13 +345,13 @@ In this case, it will respond with the entire collection.</p>
 <li>fr</li>
 </ul>
 <h1 id='houses'>Houses</h1>
-<p>For all this endpoints, the <code>:identifier</code> can be the <code>:id</code> or the localized <code>slug</code> of the house.</p>
+<p>For all this endpoints, the <code>:identifier</code> can be the <code>id</code> or the localized <code>slug</code> of the house.</p>
 
 <p>For example:</p>
 
-<p><code>GET http://example.com/fr/api/v1/houses/1</code></p>
+<p><code>GET /fr/api/v1/houses/1</code></p>
 
-<p><code>GET http://example.com/fr/api/v1/houses/chalet-megeve</code></p>
+<p><code>GET /fr/api/v1/houses/chalet-megeve</code></p>
 <h2 id='get-all'>Get All</h2>
 <p><span class='badge badge-blue'>Paginated</span>
 <span class='badge badge-green'>Localized</span></p>
@@ -384,11 +391,11 @@ In this case, it will respond with the entire collection.</p>
 </span></code></pre>
 <p>This endpoint retrieves all the available houses.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/fr/api/v1/houses</code></p>
+<p><code>GET /fr/api/v1/houses</code></p>
 
-<p><code>GET http://example.com/fr/api/v1/houses?ids=24,878</code></p>
+<p><code>GET /fr/api/v1/houses?ids=24,878</code></p>
 
-<p><code>GET http://example.com/fr/api/v1/houses?ids[]=24&amp;ids[]=878</code></p>
+<p><code>GET /fr/api/v1/houses?ids[]=24&amp;ids[]=878</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -432,7 +439,7 @@ In this case, it will respond with the entire collection.</p>
 </span></code></pre>
 <p>This endpoint retrieves an available house.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/fr/api/v1/houses/:identifier</code></p>
+<p><code>GET /fr/api/v1/houses/:identifier</code></p>
 <h2 id='get-starred-tags'>Get Starred tags</h2>
 <p><span class='badge badge-blue'>Paginated</span>
 <span class='badge badge-green'>Localized</span></p>
@@ -474,7 +481,7 @@ In this case, it will respond with the entire collection.</p>
 </span></code></pre>
 <p>This endpoint retrieves all the starred tags of a house.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET http://example.com/fr/api/v1/houses/:identifier/starrings</code></p>
+<p><code>GET /fr/api/v1/houses/:identifier/starrings</code></p>
 <h2 id='get-experiences'>Get Experiences</h2>
 <p><span class='badge badge-blue'>Paginated</span>
 <span class='badge badge-green'>Localized</span></p>
@@ -518,7 +525,7 @@ In this case, it will respond with the entire collection.</p>
 </span></code></pre>
 <p>This endpoint retrieves all the experiences of the destination&#39;s house.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>GET http://example.com/fr/api/v1/houses/:identifier/experiences</code></p>
+<p><code>GET /fr/api/v1/houses/:identifier/experiences</code></p>
 <h2 id='get-tag-39-s-group-by-section'>Get Tag&#39;s Group by Section</h2>
 <p><span class='badge badge-blue'>Paginated</span>
 <span class='badge badge-green'>Localized</span></p>
@@ -600,15 +607,15 @@ In this case, it will respond with the entire collection.</p>
 <li>outdoor_and_recreation</li>
 </ul>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>GET http://example.com/fr/api/v1/houses/:identifier/sections/rooms</code></p>
+<p><code>GET /fr/api/v1/houses/:identifier/sections/rooms</code></p>
 
-<p><code>GET http://example.com/fr/api/v1/houses/:identifier/sections/location</code></p>
+<p><code>GET /fr/api/v1/houses/:identifier/sections/location</code></p>
 
-<p><code>GET http://example.com/fr/api/v1/houses/:identifier/sections/essentials</code></p>
+<p><code>GET /fr/api/v1/houses/:identifier/sections/essentials</code></p>
 
-<p><code>GET http://example.com/fr/api/v1/houses/:identifier/sections/amenities</code></p>
+<p><code>GET /fr/api/v1/houses/:identifier/sections/amenities</code></p>
 
-<p><code>GET http://example.com/fr/api/v1/houses/:identifier/sections/outdoor_and_recreation</code></p>
+<p><code>GET /fr/api/v1/houses/:identifier/sections/outdoor_and_recreation</code></p>
 <h2 id='get-prices'>Get Prices</h2>
 <p><span class='badge badge-bleu'>Paginated</span>
 <span class='badge badge-bleu'>Localized</span></p>
@@ -660,7 +667,7 @@ In this case, it will respond with the entire collection.</p>
 </span></code></pre>
 <p>This endpoint retrieves all the prices of the house.</p>
 <h3 id='http-request-6'>HTTP Request</h3>
-<p><code>GET http://example.com/fr/api/v1/houses/:identifier/prices</code></p>
+<p><code>GET /fr/api/v1/houses/:identifier/prices</code></p>
 
       </div>
       <div class="dark-box">
