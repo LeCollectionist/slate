@@ -1,6 +1,6 @@
 # Houses
 
-For all this endpoints, the `:identifier` can be the `id` or the localized `slug` of the house.
+For all this endpoints, the `:identifier` can be the `id` or the localized `slug`.
 
 For example:
 
@@ -22,7 +22,10 @@ For example:
       "type": "house",
       "attributes": {
         "name": "Appartement 1",
-        "slug": "appartement-fr",
+        "slug": {
+          "fr": "appartement-fr",
+          "en": "appartement-en"
+        },
         "firstPhotoUrl": "url-of-the-img-appartement"
       }
     },
@@ -31,7 +34,10 @@ For example:
       "type": "house",
       "attributes": {
         "name": "Villa 878",
-        "slug": "villa-878",
+        "slug": {
+          "fr": "villa-878",
+          "en": "villa-8en"
+        },
         "firstPhotoUrl": null
       }
     }
@@ -81,7 +87,10 @@ ids | List of specific house id | `ids=24,878`
       "gpslatitude": "47.45678",
       "gpslongitude": "4.456789",
       "name": "Chalet LC",
-      "slug": "chalet-lc",
+      "slug": {
+        "fr": "chalet-lc",
+        "en": "chalet-en"
+      },
       "state": "published",
       "surface": 450,
       "surrounding": "À juste quelques kilomètres de la station mythique de Megève,..",
