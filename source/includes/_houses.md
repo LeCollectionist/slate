@@ -18,29 +18,53 @@ For example:
 {
   "data": [
     {
-      "id": "24",
+      "id": "94",
       "type": "house",
       "attributes": {
-        "name": "Appartement 1",
+        "bathrooms": 5,
+        "bedrooms": 6,
+        "capacity": 12,
+        "description": null,
+        "domainSurface": 800,
+        "leadText": null,
+        "gpslatitude": "43.4897779",
+        "gpslongitude": "-1.552215599999954",
+        "name": "Villa Trinidad",
         "slug": {
-          "fr": "appartement-fr",
-          "en": "appartement-en"
+          "en": "villa-trinidad-biarritz",
+          "fr": "villa-trinidad-biarritz"
         },
-        "firstPhotoUrl": "url-of-the-img-appartement"
+        "state": "published",
+        "surface": 320,
+        "surrounding": null,
+        "firstPhotoUrl": null,
+        "cluster": {
+          "id": "55",
+          "type": "destination",
+          "attributes": {
+            "name": "Southwest",
+            "slug": {
+              "en": "southwest",
+              "fr": "sud-ouest"
+            },
+            "description": "Southwest"
+          }
+        },
+        "country": {
+          "id": "1",
+          "type": "destination",
+          "attributes": {
+            "name": "France",
+            "slug": {
+              "en": "france",
+              "fr": "france"
+            },
+            "description": "France"
+          }
+        }
       }
     },
-    {
-      "id": "878",
-      "type": "house",
-      "attributes": {
-        "name": "Villa 878",
-        "slug": {
-          "fr": "villa-878",
-          "en": "villa-8en"
-        },
-        "firstPhotoUrl": null
-      }
-    }
+    ...
   ],
   "meta": {
     "current_page": 1,
@@ -94,7 +118,31 @@ ids | List of specific house id | `ids=24,878`
       "state": "published",
       "surface": 450,
       "surrounding": "À juste quelques kilomètres de la station mythique de Megève,..",
-      "firstPhotoUrl": "first-photo-url"
+      "firstPhotoUrl": "first-photo-url",
+      "cluster": {
+        "id": "31",
+        "type": "destination",
+        "attributes": {
+          "name": "French Alps",
+          "slug": {
+            "en": "french-alps",
+            "fr": "alpes-francaises"
+          },
+          "description": "French Alps"
+        }
+      },
+      "country": {
+        "id": "89",
+        "type": "destination",
+        "attributes": {
+          "name": "France",
+          "slug": {
+            "en": "france",
+            "fr": "france"
+          },
+          "description": "France"
+        }
+      }
     }
   }
 }
@@ -292,9 +340,52 @@ The possible the sections are:
 
 `GET /fr/api/v1/houses/:identifier/sections/outdoor_and_recreation`
 
+## Get Photos
+<span class='badge badge-blue'>Paginated</span>
+
+> Response:
+
+```json
+{
+  "data": [
+    {
+      "id": "4822",
+      "type": "photo",
+      "attributes": {
+        "position": 14,
+        "url": "first-photo-url"
+      }
+    },
+    ...
+    {
+      "id": "40961",
+      "type": "photo",
+      "attributes": {
+        "position": 37,
+        "url": "second-photo-url"
+      }
+    },
+  ],
+  "meta": {
+    "current_page": 1,
+    "next_page": 2,
+    "per_page": 25,
+    "prev_page": null,
+    "total_pages": 2,
+    "total_count": 27
+  }
+}
+```
+
+This endpoint retrieves all the photos of the house.
+
+### HTTP Request
+
+`GET /fr/api/v1/houses/:identifier/photos`
+
 ## Get Prices
-<span class='badge badge-bleu'>Paginated</span>
-<span class='badge badge-bleu'>Localized</span>
+<span class='badge badge-blue'>Paginated</span>
+<span class='badge badge-green'>Localized</span>
 
 > Response:
 
