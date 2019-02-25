@@ -439,3 +439,59 @@ This endpoint retrieves all the prices of the house.
 
 `GET /fr/api/v1/houses/:identifier/prices`
 
+## Get Booking Flights
+<span class='badge badge-blue'>Paginated</span>
+
+> Response:
+
+```json
+{
+  "data": [
+    {
+      "id": "6975",
+      "type": "bookingFlight",
+      "attributes": {
+        "startOn": "2020-03-22",
+        "endOn": "2020-03-29",
+        "price": null,
+        "kind": "external",
+        "currency": null,
+        "checkInTime": null,
+        "checkOutTime": null,
+        "bookingInfo": "External",
+        "houseId": 780
+      }
+    },
+    ...
+    {
+      "id": "6981",
+      "type": "bookingFlight",
+      "attributes": {
+        "startOn": "2020-03-29",
+        "endOn": "2020-04-05",
+        "price": null,
+        "kind": "external",
+        "currency": null,
+        "checkInTime": null,
+        "checkOutTime": null,
+        "bookingInfo": "External",
+        "houseId": 780
+      }
+    }
+  ],
+  "meta": {
+    "current_page": 1,
+    "next_page": 2,
+    "per_page": 25,
+    "prev_page": null,
+    "total_pages": 4,
+    "total_count": 89
+  }
+}
+```
+
+This endpoint retrieves all the booking flights of the house.
+
+### HTTP Request
+
+`GET /fr/api/v1/houses/:identifier/booking_flights`
