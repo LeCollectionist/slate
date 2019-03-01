@@ -7,6 +7,7 @@ toc_footers:
 includes:
   - intro
   - houses
+  - destinations
 
 search: true
 ---

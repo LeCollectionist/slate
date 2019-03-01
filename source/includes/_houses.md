@@ -8,7 +8,7 @@ For example:
 
 `GET /fr/api/v1/houses/chalet-megeve`
 
-## Get All
+## Get All Houses
 <span class='badge badge-blue'>Paginated</span>
 <span class='badge badge-green'>Localized</span>
 
@@ -25,6 +25,7 @@ For example:
         "bedrooms": 6,
         "capacity": 12,
         "description": null,
+        "destinationId": 17,
         "domainSurface": 800,
         "leadText": null,
         "gpslatitude": "43.4897779",
@@ -37,30 +38,7 @@ For example:
         "state": "published",
         "surface": 320,
         "surrounding": null,
-        "firstPhotoUrl": null,
-        "cluster": {
-          "id": "55",
-          "type": "destination",
-          "attributes": {
-            "name": "Southwest",
-            "slug": {
-              "en": "southwest",
-              "fr": "sud-ouest"
-            },
-            "description": "Southwest"
-          }
-        },
-        "country": {
-          "id": "1",
-          "type": "destination",
-          "attributes": {
-            "name": "France",
-            "slug": {
-              "en": "france",
-              "fr": "france"
-            },
-            "description": "France"
-          }
+        "firstPhotoUrl": null
         }
       }
     },
@@ -92,7 +70,8 @@ Parameter | Description | Example
 --------- | ----------- | -------
 ids | List of specific house id | `ids=24,878`
 
-## Get One
+## Get One House
+<span class='badge badge-green'>Localized</span>
 
 > Response:
 
@@ -106,6 +85,7 @@ ids | List of specific house id | `ids=24,878`
       "bedrooms": 7,
       "capacity": 14,
       "description": "Îlot de tranquillité, il est loin du tumulte ..",
+      "destinationId": 71,
       "domainSurface": 90000,
       "leadText": "Le chalet LC est un alpage ... ",
       "gpslatitude": "47.45678",
@@ -118,31 +98,7 @@ ids | List of specific house id | `ids=24,878`
       "state": "published",
       "surface": 450,
       "surrounding": "À juste quelques kilomètres de la station mythique de Megève,..",
-      "firstPhotoUrl": "first-photo-url",
-      "cluster": {
-        "id": "31",
-        "type": "destination",
-        "attributes": {
-          "name": "French Alps",
-          "slug": {
-            "en": "french-alps",
-            "fr": "alpes-francaises"
-          },
-          "description": "French Alps"
-        }
-      },
-      "country": {
-        "id": "89",
-        "type": "destination",
-        "attributes": {
-          "name": "France",
-          "slug": {
-            "en": "france",
-            "fr": "france"
-          },
-          "description": "France"
-        }
-      }
+      "firstPhotoUrl": "first-photo-url"
     }
   }
 }
