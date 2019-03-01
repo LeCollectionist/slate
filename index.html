@@ -233,10 +233,10 @@
             <a href="#houses" class="toc-h1 toc-link" data-title="Houses">Houses</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all" class="toc-h2 toc-link" data-title="Get All">Get All</a>
+                    <a href="#get-all-houses" class="toc-h2 toc-link" data-title="Get All Houses">Get All Houses</a>
                   </li>
                   <li>
-                    <a href="#get-one" class="toc-h2 toc-link" data-title="Get One">Get One</a>
+                    <a href="#get-one-house" class="toc-h2 toc-link" data-title="Get One House">Get One House</a>
                   </li>
                   <li>
                     <a href="#get-starred-tags" class="toc-h2 toc-link" data-title="Get Starred tags">Get Starred tags</a>
@@ -255,6 +255,17 @@
                   </li>
                   <li>
                     <a href="#get-booking-flights" class="toc-h2 toc-link" data-title="Get Booking Flights">Get Booking Flights</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#destinations" class="toc-h1 toc-link" data-title="Destinations">Destinations</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-destinations" class="toc-h2 toc-link" data-title="Get All Destinations">Get All Destinations</a>
+                  </li>
+                  <li>
+                    <a href="#get-one-destination" class="toc-h2 toc-link" data-title="Get One Destination">Get One Destination</a>
                   </li>
               </ul>
           </li>
@@ -358,7 +369,7 @@ In this case, it will respond with the entire collection.</p>
 <p><code>GET /fr/api/v1/houses/1</code></p>
 
 <p><code>GET /fr/api/v1/houses/chalet-megeve</code></p>
-<h2 id='get-all'>Get All</h2>
+<h2 id='get-all-houses'>Get All Houses</h2>
 <p><span class='badge badge-blue'>Paginated</span>
 <span class='badge badge-green'>Localized</span></p>
 
@@ -375,6 +386,7 @@ In this case, it will respond with the entire collection.</p>
         </span><span class="s2">"bedrooms"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
         </span><span class="s2">"capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
         </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"destinationId"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
         </span><span class="s2">"domainSurface"</span><span class="p">:</span><span class="w"> </span><span class="mi">800</span><span class="p">,</span><span class="w">
         </span><span class="s2">"leadText"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"gpslatitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"43.4897779"</span><span class="p">,</span><span class="w">
@@ -387,30 +399,7 @@ In this case, it will respond with the entire collection.</p>
         </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"published"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"surface"</span><span class="p">:</span><span class="w"> </span><span class="mi">320</span><span class="p">,</span><span class="w">
         </span><span class="s2">"surrounding"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"firstPhotoUrl"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"cluster"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"55"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"destination"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Southwest"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-              </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"southwest"</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sud-ouest"</span><span class="w">
-            </span><span class="p">},</span><span class="w">
-            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Southwest"</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"destination"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"France"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-              </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"france"</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"france"</span><span class="w">
-            </span><span class="p">},</span><span class="w">
-            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"France"</span><span class="w">
-          </span><span class="p">}</span><span class="w">
+        </span><span class="s2">"firstPhotoUrl"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
@@ -446,7 +435,9 @@ In this case, it will respond with the entire collection.</p>
 <td><code>ids=24,878</code></td>
 </tr>
 </tbody></table>
-<h2 id='get-one'>Get One</h2>
+<h2 id='get-one-house'>Get One House</h2>
+<p><span class='badge badge-green'>Localized</span></p>
+
 <blockquote>
 <p>Response:</p>
 </blockquote>
@@ -459,6 +450,7 @@ In this case, it will respond with the entire collection.</p>
       </span><span class="s2">"bedrooms"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
       </span><span class="s2">"capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w">
       </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Îlot de tranquillité, il est loin du tumulte .."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"destinationId"</span><span class="p">:</span><span class="w"> </span><span class="mi">71</span><span class="p">,</span><span class="w">
       </span><span class="s2">"domainSurface"</span><span class="p">:</span><span class="w"> </span><span class="mi">90000</span><span class="p">,</span><span class="w">
       </span><span class="s2">"leadText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Le chalet LC est un alpage ... "</span><span class="p">,</span><span class="w">
       </span><span class="s2">"gpslatitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"47.45678"</span><span class="p">,</span><span class="w">
@@ -471,31 +463,7 @@ In this case, it will respond with the entire collection.</p>
       </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"published"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"surface"</span><span class="p">:</span><span class="w"> </span><span class="mi">450</span><span class="p">,</span><span class="w">
       </span><span class="s2">"surrounding"</span><span class="p">:</span><span class="w"> </span><span class="s2">"À juste quelques kilomètres de la station mythique de Megève,.."</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"firstPhotoUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"first-photo-url"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"cluster"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"31"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"destination"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"French Alps"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"french-alps"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"alpes-francaises"</span><span class="w">
-          </span><span class="p">},</span><span class="w">
-          </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"French Alps"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"89"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"destination"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"France"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"france"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"france"</span><span class="w">
-          </span><span class="p">},</span><span class="w">
-          </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"France"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">}</span><span class="w">
+      </span><span class="s2">"firstPhotoUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"first-photo-url"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -823,6 +791,163 @@ In this case, it will respond with the entire collection.</p>
 <p>This endpoint retrieves all the booking flights of the house.</p>
 <h3 id='http-request-8'>HTTP Request</h3>
 <p><code>GET /fr/api/v1/houses/:identifier/booking_flights</code></p>
+<h1 id='destinations'>Destinations</h1>
+<p>For all this endpoints, the <code>:identifier</code> can be the <code>id</code> or the localized <code>slug</code>.</p>
+
+<p>For example:</p>
+
+<p><code>GET /fr/api/v1/destinations/17</code></p>
+
+<p><code>GET /fr/api/v1/destinations/ibiza</code></p>
+<h2 id='get-all-destinations'>Get All Destinations</h2>
+<p><span class='badge badge-blue'>Paginated</span>
+<span class='badge badge-green'>Localized</span></p>
+
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+     </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"387"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"destination"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"authorName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patmos"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"cluster"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"216"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"destination"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Iles du Dodécanèse"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dodecanese-islands"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iles-du-dodecanese"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rhodes &amp; les Iles du Dodécanèse"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"18"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"destination"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Grèce"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"greece"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"grece"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Grèce"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patmos"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"isCluster"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"isCountry"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"isVisible"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"metaDescription"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patmos"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"metaTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patmos"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patmos"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"searchMetaDescription"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"searchMetaTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Location villas luxe Patmos"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"searchText"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"searchTextTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Location villas luxe Patmos"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"searchUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"location-villas-luxe/patmos"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"patmos"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"patmos"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patmos"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"whenToLeaveText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TBC"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"current_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"per_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"prev_page"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">44</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">567</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all the destinations.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET /fr/api/v1/destinations</code></p>
+
+<p><code>GET /fr/api/v1/destinations?ids=24,878</code></p>
+
+<p><code>GET /fr/api/v1/destinations?ids[]=24&amp;ids[]=878</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ids</td>
+<td>List of specific destination id</td>
+<td><code>ids=24,878</code></td>
+</tr>
+</tbody></table>
+<h2 id='get-one-destination'>Get One Destination</h2>
+<p><span class='badge badge-green'>Localized</span></p>
+
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+</span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"71"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"destination"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"authorName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Antoine Lorgnier"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"cluster"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"70"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"destination"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Corse"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"corsica"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"corse"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Corse"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"destination"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"France"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"france"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"france"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"France"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bonifacio - Tout en haut de la montée Saint-Roch..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"isCluster"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"isCountry"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"isVisible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"metaDescription"</span><span class="p">:</span><span class="w"> </span><span class="s2">"En Corse du Sud, la nature est..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Corse du Sud"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"searchMetaDescription"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nos locations de villas en Corse du Sud sont..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"searchMetaTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Villa Corse du sud - Location villas luxe Corse du Sud"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"searchText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Découvrez nos villas en Corse du Sud</span><span class="se">\r\n\r\n</span><span class="s2">Nos locations..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"searchUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"location-villas-luxe/corse-du-sud"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"south-corsica"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"corse-du-sud"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"La Corse du Sud, entre mer et montagne"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"whenToLeaveText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C’est en automne, de la mi-septembre à la..."</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a destination.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET /fr/api/v1/destinations/:identifier</code></p>
 
       </div>
       <div class="dark-box">
