@@ -24,6 +24,8 @@ For example:
         "bathrooms": 5,
         "bedrooms": 6,
         "capacity": 12,
+        "minimumStayHighSeason": 7,
+        "minimumStayLowSeason": 3,
         "description": null,
         "destinationId": 17,
         "domainSurface": 800,
@@ -98,7 +100,7 @@ ids | List of specific house id | `ids=24,878`
       "state": "published",
       "surface": 450,
       "surrounding": "À juste quelques kilomètres de la station mythique de Megève,..",
-      "firstPhotoUrl": "first-photo-url"
+      "firstPhotoUrl": "//first-photo-url"
     }
   }
 }
@@ -359,6 +361,7 @@ This endpoint retrieves all the photos of the house.
         "fee": "0.25",
         "ownerPrice": 4560,
         "publicPrice": 5700,
+        "season": "high",
         "taxesAndCharges": "0.0"
       }
     },
@@ -374,6 +377,7 @@ This endpoint retrieves all the photos of the house.
         "fee": "0.25",
         "ownerPrice": 2629,
         "publicPrice": 3286,
+        "season": "low",
         "taxesAndCharges": "0.0"
       }
     }
