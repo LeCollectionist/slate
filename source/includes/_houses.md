@@ -127,6 +127,7 @@ This endpoint retrieves an available house.
       "attributes": {
         "isVisible": true,
         "name": "Local à ski et chauffe chaussures",
+        "position": 10,
         "photo": "url-of-the-tag"
       }
     },
@@ -137,6 +138,7 @@ This endpoint retrieves an available house.
       "attributes": {
         "isVisible": true,
         "name": "Cave à vin",
+        "position": 14,
         "photo": null
       }
     }
@@ -221,6 +223,7 @@ This endpoint retrieves all the experiences of the destination's house.
       "attributes": {
         "name": "Bureau",
         "position": 18,
+        "group_type_id": 1,
         "tags": [
           {
             "id": "272",
@@ -228,6 +231,7 @@ This endpoint retrieves all the experiences of the destination's house.
             "attributes": {
               "isVisible": false,
               "name": "Table",
+              "position": 14,
               "photo": null
             }
           },
@@ -238,6 +242,7 @@ This endpoint retrieves all the experiences of the destination's house.
             "attributes": {
               "isVisible": false,
               "name": "Téléphone",
+              "position": 11,
               "photo": null
             }
           }
@@ -250,6 +255,7 @@ This endpoint retrieves all the experiences of the destination's house.
       "attributes": {
         "name": "Salle à manger",
         "position": 3,
+        "group_type_id": 12,
         "tags": [
           {
             "id": "182",
@@ -257,6 +263,7 @@ This endpoint retrieves all the experiences of the destination's house.
             "attributes": {
               "isVisible": false,
               "name": "Nombre de personnes assises",
+              "position": 18,
               "photo": null
             }
           },
