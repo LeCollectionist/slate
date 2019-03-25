@@ -33,6 +33,8 @@ For example:
         "licenceNumber": "789087",
         "gpslatitude": "43.4897779",
         "gpslongitude": "-1.552215599999954",
+        "maxPrice": 4000,
+        "minPrice": 1000,
         "name": "Villa Trinidad",
         "slug": {
           "en": "villa-trinidad-biarritz",
@@ -94,6 +96,8 @@ ids | List of specific house id | `ids=24,878`
       "licenceNumber": "789087",
       "gpslatitude": "47.45678",
       "gpslongitude": "4.456789",
+      "maxPrice": 4000,
+      "minPrice": 1000,
       "name": "Chalet LC",
       "slug": {
         "fr": "chalet-lc",
