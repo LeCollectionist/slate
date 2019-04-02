@@ -24,19 +24,21 @@ For example:
         "bathrooms": 5,
         "bedrooms": 6,
         "capacity": 12,
-        "minimumStayHighSeason": 7,
-        "minimumStayLowSeason": 3,
         "description": null,
         "destinationId": 17,
         "domainSurface": 800,
-        "leadText": null,
-        "licenceNumber": "789087",
+        "firstPhotoUrl": null,
         "gpslatitude": "43.4897779",
         "gpslongitude": "-1.552215599999954",
+        "hiddenPrice": false,
         "housekeeping": "daily",
         "housekeepingHours": "",
+        "leadText": null,
+        "licenceNumber": "789087",
         "maxPrice": 4000,
         "minPrice": 1000,
+        "minimumStayHighSeason": 7,
+        "minimumStayLowSeason": 3,
         "name": "Villa Trinidad",
         "slug": {
           "en": "villa-trinidad-biarritz",
@@ -44,8 +46,7 @@ For example:
         },
         "state": "published",
         "surface": 320,
-        "surrounding": null,
-        "firstPhotoUrl": null
+        "surrounding": null
         }
       }
     },
@@ -94,23 +95,23 @@ ids | List of specific house id | `ids=24,878`
       "description": "Îlot de tranquillité, il est loin du tumulte ..",
       "destinationId": 71,
       "domainSurface": 90000,
-      "leadText": "Le chalet LC est un alpage ... ",
-      "licenceNumber": "789087",
+      "firstPhotoUrl": "//first-photo-url",
       "gpslatitude": "47.45678",
       "gpslongitude": "4.456789",
       "housekeeping": "daily",
       "housekeepingHours": "",
+      "leadText": "Le chalet LC est un alpage ... ",
+      "licenceNumber": "789087",
       "maxPrice": 4000,
       "minPrice": 1000,
       "name": "Chalet LC",
       "slug": {
-        "fr": "chalet-lc",
-        "en": "chalet-en"
-      },
+        "en": "chalet-en",
+        "fr": "chalet-lc"
+      }
       "state": "published",
       "surface": 450,
-      "surrounding": "À juste quelques kilomètres de la station mythique de Megève,..",
-      "firstPhotoUrl": "//first-photo-url"
+      "surrounding": "À juste quelques kilomètres de la station mythique de Megève,.."
     }
   }
 }
