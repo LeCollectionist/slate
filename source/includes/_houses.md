@@ -187,7 +187,17 @@ This endpoint retrieves all the starred tags of a house.
         "address": null,
         "description": "Arpentez le large territoire du Mont ...",
         "leadText": "",
-        "name": "Jouer les apprentis musher"
+        "name": "Jouer les apprentis musher",
+        "photos": [
+          {
+            "id": "678",
+            "type": "photo",
+            "attributes": {
+              "position": 1,
+              "url": "url-of-the-photo"
+            }
+          }
+        ]
       }
     },
     ...
@@ -198,7 +208,8 @@ This endpoint retrieves all the starred tags of a house.
         "address": null,
         "description": "Devenez un oiseau de nuit en parcourant...",
         "leadText": "",
-        "name": "Explorer les stations de ski la nuit"
+        "name": "Explorer les stations de ski la nuit",
+        "photos": []
       }
     }
   ],
