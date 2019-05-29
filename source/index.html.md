@@ -8,6 +8,7 @@ includes:
   - intro
   - houses
   - destinations
+  - wishlists
 
 search: true
 ---
