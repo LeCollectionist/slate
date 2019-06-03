@@ -132,11 +132,15 @@ This endpoint creates a wishlist
 
 ### HTTP Request
 
-`POST /fr/api/v1/wishlists`
-with parameter
-`wishlist[house_ids][]=235`
+`POST /fr/api/v1/wishlists` with parameter `wishlist[house_ids]`
 
-You can send many times the `wishlist[house_ids][]` parameter with different house id.
+The `wishlist[house_ids]` parameter must be an array.
+
+### Query Parameters
+
+Parameter | Description | Example
+--------- | ----------- | -------
+wishlist[house_ids] | Array of house ids | [24, 878]
 
 ## Updates A Wishlist
 <span class='badge badge-green'>Localized</span>
@@ -158,13 +162,18 @@ You can send many times the `wishlist[house_ids][]` parameter with different hou
 
 This endpoint updates a wishlist.
 
+### HTTP Request
+
+`PUT /fr/api/v1/wishlists/:token` with parameter `wishlist[house_ids]`
+
+The `wishlist[house_ids]` parameter must be an array.
 
 You must send all the ids of the wishlist.
 
 Not including a house id related to the wishlist will unlink them.
 
-### HTTP Request
+### Query Parameters
 
-`PUT /fr/api/v1/wishlists/Hr82kZh9zCrGmfBC4b8eYTm2`
-
-You can send many times the `wishlist[house_ids][]` parameter with different house id.
+Parameter | Description | Example
+--------- | ----------- | -------
+wishlist[house_ids] | Array of house ids | [24]
