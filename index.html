@@ -1169,11 +1169,23 @@ In this case, it will respond with the entire collection.</p>
 </span></code></pre>
 <p>This endpoint creates a wishlist</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>POST /fr/api/v1/wishlists</code>
-with parameter
-<code>wishlist[house_ids][]=235</code></p>
+<p><code>POST /fr/api/v1/wishlists</code> with parameter <code>wishlist[house_ids]</code></p>
 
-<p>You can send many times the <code>wishlist[house_ids][]</code> parameter with different house id.</p>
+<p>The <code>wishlist[house_ids]</code> parameter must be an array.</p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>wishlist[house_ids]</td>
+<td>Array of house ids</td>
+<td>[24, 878]</td>
+</tr>
+</tbody></table>
 <h2 id='updates-a-wishlist'>Updates A Wishlist</h2>
 <p><span class='badge badge-green'>Localized</span></p>
 
@@ -1192,14 +1204,28 @@ with parameter
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint updates a wishlist.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>PUT /fr/api/v1/wishlists/Hr82kZh9zCrGmfBC4b8eYTm2</code> with parameter <code>wishlist[house_ids]</code></p>
+
+<p>The <code>wishlist[house_ids]</code> parameter must be an array.</p>
 
 <p>You must send all the ids of the wishlist.</p>
 
 <p>Not including a house id related to the wishlist will unlink them.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>PUT /fr/api/v1/wishlists/Hr82kZh9zCrGmfBC4b8eYTm2</code></p>
-
-<p>You can send many times the <code>wishlist[house_ids][]</code> parameter with different house id.</p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>wishlist[house_ids]</td>
+<td>Array of house ids</td>
+<td>[24]</td>
+</tr>
+</tbody></table>
 
       </div>
       <div class="dark-box">
