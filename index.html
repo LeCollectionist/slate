@@ -279,7 +279,7 @@
                     <a href="#creates-a-wishlist" class="toc-h2 toc-link" data-title="Creates A Wishlist">Creates A Wishlist</a>
                   </li>
                   <li>
-                    <a href="#updates-a-wishlist" class="toc-h2 toc-link" data-title="Updates A Wishlist">Updates A Wishlist</a>
+                    <a href="#unlink-a-house-from-a-wishlist" class="toc-h2 toc-link" data-title="Unlink a house from a Wishlist">Unlink a house from a Wishlist</a>
                   </li>
               </ul>
           </li>
@@ -1051,62 +1051,31 @@ In this case, it will respond with the entire collection.</p>
 <p>Response:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wishlist"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hr82kZh9zCrGmfBC4b8eYTm2"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"houses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"235"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"house"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"bathrooms"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bedrooms"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"When you first stroll down Rue J..."</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"destinationId"</span><span class="p">:</span><span class="w"> </span><span class="mi">85</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"domainSurface"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"gpslatitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"42.269895"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"gpslongitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6.638203"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"hiddenPrice"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"housekeeping"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2_days"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"housekeepingHours"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3_hours"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"leadText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Appartement LC is a dive into the heart of..."</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"licenceNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"minimumStayHighSeason"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"minimumStayLowSeason"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Appartement LC"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-              </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"appartement-lc"</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"appartement-lc"</span><span class="w">
-            </span><span class="p">},</span><span class="w">
-            </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"published"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"surface"</span><span class="p">:</span><span class="w"> </span><span class="mi">240</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"surrounding"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dawn has barely broken but the port of..."</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"firstPhotoUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"photo-url.jpg"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"maxPrice"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-              </span><span class="s2">"CHF"</span><span class="p">:</span><span class="w"> </span><span class="mi">1422</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"EUR"</span><span class="p">:</span><span class="w"> </span><span class="mi">1250</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"GBP"</span><span class="p">:</span><span class="w"> </span><span class="mi">1078</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"USD"</span><span class="p">:</span><span class="w"> </span><span class="mi">1404</span><span class="w">
-            </span><span class="p">},</span><span class="w">
-            </span><span class="s2">"minPrice"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-              </span><span class="s2">"CHF"</span><span class="p">:</span><span class="w"> </span><span class="mi">996</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"EUR"</span><span class="p">:</span><span class="w"> </span><span class="mi">875</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"GBP"</span><span class="p">:</span><span class="w"> </span><span class="mi">755</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"USD"</span><span class="p">:</span><span class="w"> </span><span class="mi">983</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">]</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"house"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"bathrooms"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bedrooms"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+      </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"current_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"per_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"prev_page"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves a wishlist</p>
+<p>This endpoint retrieves a wishlist&#39;s houses</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET /fr/api/v1/wishlists/:token</code></p>
+<p><code>GET /fr/api/v1/wishlists/:token/houses</code></p>
 <h2 id='creates-a-wishlist'>Creates A Wishlist</h2>
 <p><span class='badge badge-green'>Localized</span></p>
 
@@ -1115,63 +1084,20 @@ In this case, it will respond with the entire collection.</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wishlist"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hr82kZh9zCrGmfBC4b8eYTm2"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"houses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"235"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"house"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"bathrooms"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"bedrooms"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"When you first stroll down Rue J..."</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"destinationId"</span><span class="p">:</span><span class="w"> </span><span class="mi">85</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"domainSurface"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"gpslatitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"42.269895"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"gpslongitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6.638203"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"hiddenPrice"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"housekeeping"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2_days"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"housekeepingHours"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3_hours"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"leadText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Appartement LC is a dive into the heart of..."</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"licenceNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"minimumStayHighSeason"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"minimumStayLowSeason"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Appartement LC"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-              </span><span class="s2">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"appartement-lc"</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"fr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"appartement-lc"</span><span class="w">
-            </span><span class="p">},</span><span class="w">
-            </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"published"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"surface"</span><span class="p">:</span><span class="w"> </span><span class="mi">240</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"surrounding"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dawn has barely broken but the port of..."</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"firstPhotoUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"photo-url.jpg"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"maxPrice"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-              </span><span class="s2">"CHF"</span><span class="p">:</span><span class="w"> </span><span class="mi">1422</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"EUR"</span><span class="p">:</span><span class="w"> </span><span class="mi">1250</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"GBP"</span><span class="p">:</span><span class="w"> </span><span class="mi">1078</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"USD"</span><span class="p">:</span><span class="w"> </span><span class="mi">1404</span><span class="w">
-            </span><span class="p">},</span><span class="w">
-            </span><span class="s2">"minPrice"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-              </span><span class="s2">"CHF"</span><span class="p">:</span><span class="w"> </span><span class="mi">996</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"EUR"</span><span class="p">:</span><span class="w"> </span><span class="mi">875</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"GBP"</span><span class="p">:</span><span class="w"> </span><span class="mi">755</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"USD"</span><span class="p">:</span><span class="w"> </span><span class="mi">983</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">]</span><span class="w">
+      </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c74e5890-18ed-4651-92d6-240b986cd767"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"housesCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint creates a wishlist</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>POST /fr/api/v1/wishlists</code> with parameter <code>wishlist[house_ids]</code></p>
+<p><code>POST /fr/api/v1/wishlists/:token</code> with parameter <code>wishlist[house_id]</code></p>
 
-<p>The <code>wishlist[house_ids]</code> parameter must be an array.</p>
+<p>The <code>wishlist[house_id]</code> parameter must be the house id.</p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -1181,12 +1107,12 @@ In this case, it will respond with the entire collection.</p>
 </tr>
 </thead><tbody>
 <tr>
-<td>wishlist[house_ids]</td>
-<td>Array of house ids</td>
-<td>[24, 878]</td>
+<td>wishlist[house_id]</td>
+<td>house id</td>
+<td>878</td>
 </tr>
 </tbody></table>
-<h2 id='updates-a-wishlist'>Updates A Wishlist</h2>
+<h2 id='unlink-a-house-from-a-wishlist'>Unlink a house from a Wishlist</h2>
 <p><span class='badge badge-green'>Localized</span></p>
 
 <blockquote>
@@ -1194,38 +1120,18 @@ In this case, it will respond with the entire collection.</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wishlist"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hr82kZh9zCrGmfBC4b8eYTm2"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"houses"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+      </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c74e5890-18ed-4651-92d6-240b986cd767"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"housesCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint updates a wishlist.</p>
+<p>This endpoint unlink a house from the wishlist.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>PUT /fr/api/v1/wishlists/:token</code> with parameter <code>wishlist[house_ids]</code></p>
-
-<p>The <code>wishlist[house_ids]</code> parameter must be an array.</p>
-
-<p>You must send all the ids of the wishlist.</p>
-
-<p>Not including a house id related to the wishlist will unlink them.</p>
-<h3 id='query-parameters-2'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>wishlist[house_ids]</td>
-<td>Array of house ids</td>
-<td>[24]</td>
-</tr>
-</tbody></table>
+<p><code>DELETE /fr/api/v1/wishlists/:token/houses/:house_id</code></p>
 
       </div>
       <div class="dark-box">
