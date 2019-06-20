@@ -7,122 +7,47 @@
 
 ```json
 {
-  "data": {
-    "id": "7",
-    "type": "wishlist",
-    "attributes": {
-      "token": "Hr82kZh9zCrGmfBC4b8eYTm2",
-      "houses": [
-        {
-          "id": "235",
-          "type": "house",
-          "attributes": {
-            "bathrooms": 0,
-            "bedrooms": 4,
-            "capacity": 8,
-            "description": "When you first stroll down Rue J...",
-            "destinationId": 85,
-            "domainSurface": 0,
-            "gpslatitude": "42.269895",
-            "gpslongitude": "6.638203",
-            "hiddenPrice": false,
-            "housekeeping": "2_days",
-            "housekeepingHours": "3_hours",
-            "leadText": "Appartement LC is a dive into the heart of...",
-            "licenceNumber": "",
-            "minimumStayHighSeason": 7,
-            "minimumStayLowSeason": 3,
-            "name": "Appartement LC",
-            "slug": {
-              "en": "appartement-lc",
-              "fr": "appartement-lc"
-            },
-            "state": "published",
-            "surface": 240,
-            "surrounding": "Dawn has barely broken but the port of...",
-            "firstPhotoUrl": "photo-url.jpg",
-            "maxPrice": {
-              "CHF": 1422,
-              "EUR": 1250,
-              "GBP": 1078,
-              "USD": 1404
-            },
-            "minPrice": {
-              "CHF": 996,
-              "EUR": 875,
-              "GBP": 755,
-              "USD": 983
-            }
-          }
-        }
-      ]
+  "data": [
+    {
+      "id": "7",
+      "type": "house",
+      "attributes": {
+        "bathrooms": 5,
+        "bedrooms": 7,
+        "capacity": 14,
+        ...
+      }
     }
+  ],
+  "meta": {
+    "current_page": 1,
+    "next_page": null,
+    "per_page": 25,
+    "prev_page": null,
+    "total_pages": 1,
+    "total_count": 1
   }
 }
 ```
 
-This endpoint retrieves a wishlist
+This endpoint retrieves a wishlist's houses
 
 ### HTTP Request
 
-`GET /fr/api/v1/wishlists/:token`
+`GET /fr/api/v1/wishlists/:token/houses`
 
 ## Creates A Wishlist
-<span class='badge badge-green'>Localized</span>
 
 > Response:
 
 ```json
 {
   "data": {
-    "id": "7",
+    "id": "4",
     "type": "wishlist",
     "attributes": {
-      "token": "Hr82kZh9zCrGmfBC4b8eYTm2",
-      "houses": [
-        {
-          "id": "235",
-          "type": "house",
-          "attributes": {
-            "bathrooms": 0,
-            "bedrooms": 4,
-            "capacity": 8,
-            "description": "When you first stroll down Rue J...",
-            "destinationId": 85,
-            "domainSurface": 0,
-            "gpslatitude": "42.269895",
-            "gpslongitude": "6.638203",
-            "hiddenPrice": false,
-            "housekeeping": "2_days",
-            "housekeepingHours": "3_hours",
-            "leadText": "Appartement LC is a dive into the heart of...",
-            "licenceNumber": "",
-            "minimumStayHighSeason": 7,
-            "minimumStayLowSeason": 3,
-            "name": "Appartement LC",
-            "slug": {
-              "en": "appartement-lc",
-              "fr": "appartement-lc"
-            },
-            "state": "published",
-            "surface": 240,
-            "surrounding": "Dawn has barely broken but the port of...",
-            "firstPhotoUrl": "photo-url.jpg",
-            "maxPrice": {
-              "CHF": 1422,
-              "EUR": 1250,
-              "GBP": 1078,
-              "USD": 1404
-            },
-            "minPrice": {
-              "CHF": 996,
-              "EUR": 875,
-              "GBP": 755,
-              "USD": 983
-            }
-          }
-        }
-      ]
+      "token": "c74e5890-18ed-4651-92d6-240b986cd767",
+      "housesCount": 1
     }
   }
 }
@@ -132,48 +57,35 @@ This endpoint creates a wishlist
 
 ### HTTP Request
 
-`POST /fr/api/v1/wishlists` with parameter `wishlist[house_ids]`
+`POST /api/v1/wishlists/:token` with parameter `wishlist[house_id]`
 
-The `wishlist[house_ids]` parameter must be an array.
+The `wishlist[house_id]` parameter must be the house id.
 
 ### Query Parameters
 
 Parameter | Description | Example
 --------- | ----------- | -------
-wishlist[house_ids] | Array of house ids | [24, 878]
+wishlist[house_id] | house id | 878
 
-## Updates A Wishlist
-<span class='badge badge-green'>Localized</span>
+## Unlink a house from a Wishlist
 
 > Response:
 
 ```json
 {
   "data": {
-    "id": "7",
+    "id": "4",
     "type": "wishlist",
     "attributes": {
-      "token": "Hr82kZh9zCrGmfBC4b8eYTm2",
-      "houses": []
+      "token": "c74e5890-18ed-4651-92d6-240b986cd767",
+      "housesCount": 0
     }
   }
 }
 ```
 
-This endpoint updates a wishlist.
+This endpoint unlink a house from the wishlist.
 
 ### HTTP Request
 
-`PUT /fr/api/v1/wishlists/:token` with parameter `wishlist[house_ids]`
-
-The `wishlist[house_ids]` parameter must be an array.
-
-You must send all the ids of the wishlist.
-
-Not including a house id related to the wishlist will unlink them.
-
-### Query Parameters
-
-Parameter | Description | Example
---------- | ----------- | -------
-wishlist[house_ids] | Array of house ids | [24]
+`DELETE /api/v1/wishlists/:token/houses/:house_id`
