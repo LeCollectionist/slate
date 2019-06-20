@@ -36,7 +36,7 @@ This endpoint retrieves a wishlist's houses
 
 `GET /fr/api/v1/wishlists/:token/houses`
 
-## Creates A Wishlist
+## Link a house to a wishlist
 
 > Response:
 
@@ -53,11 +53,11 @@ This endpoint retrieves a wishlist's houses
 }
 ```
 
-This endpoint creates a wishlist
+This endpoint links a house to a wishlist
 
 ### HTTP Request
 
-`POST /api/v1/wishlists/:token` with parameter `wishlist[house_id]`
+`POST /api/v1/wishlists/:token/houses` with parameter `wishlist[house_id]`
 
 The `wishlist[house_id]` parameter must be the house id.
 
