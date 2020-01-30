@@ -9,6 +9,7 @@ includes:
   - houses
   - destinations
   - wishlists
+  - inquiries
 
 search: true
 ---
