@@ -283,6 +283,14 @@
                   </li>
               </ul>
           </li>
+          <li>
+            <a href="#inquiries" class="toc-h1 toc-link" data-title="Inquiries">Inquiries</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-an-inquiry" class="toc-h2 toc-link" data-title="Create an Inquiry">Create an Inquiry</a>
+                  </li>
+              </ul>
+          </li>
       </ul>
         <ul class="toc-footer">
             <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
@@ -1128,6 +1136,115 @@ In this case, it will respond with the entire collection.</p>
 <p>This endpoint unlink a house from the wishlist.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>DELETE /api/v1/wishlists/:token/houses/:house_id</code></p>
+<h1 id='inquiries'>Inquiries</h1><h2 id='create-an-inquiry'>Create an Inquiry</h2>
+<p><span class='badge badge-green'>Localized</span></p>
+
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"35440"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"request"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"clientAccountId"</span><span class="p">:</span><span class="w"> </span><span class="mi">27752</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-30T13:35:43.037+01:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"endDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-20"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"houseId"</span><span class="p">:</span><span class="w"> </span><span class="mi">237</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"people"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"startDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-01"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-30T13:35:43.037+01:00"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint creates an inquiry</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST (fr;en)/api/v1/requests</code></p>
+
+<p>Either the house_id or the destination_id is required, not both of them at the same time.</p>
+
+<p>*: Mandatory</p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>*request[house_id]</td>
+<td>ID of the house</td>
+<td>237</td>
+</tr>
+<tr>
+<td>*request[destination_id]</td>
+<td>ID of the destination</td>
+<td>17</td>
+</tr>
+<tr>
+<td>*request[end_date]</td>
+<td>End date of the request</td>
+<td>&#39;2020-01-01&#39;</td>
+</tr>
+<tr>
+<td>*request[start_date]</td>
+<td>Start date of the request</td>
+<td>&#39;2020-01-20&#39;</td>
+</tr>
+<tr>
+<td>*request[favorite_contact]</td>
+<td>Favorite contact of the client</td>
+<td>email / phone / whatsapp</td>
+</tr>
+<tr>
+<td>*request[phone]</td>
+<td>Phone of the client</td>
+<td>&#39;0611234581&#39;</td>
+</tr>
+<tr>
+<td>*request[budget]</td>
+<td>Budget of the client</td>
+<td>12000</td>
+</tr>
+<tr>
+<td>*request[people]</td>
+<td>Number of people for the request</td>
+<td>12</td>
+</tr>
+<tr>
+<td>request[notes]</td>
+<td>Extra information about the request</td>
+<td>&#39;&#39;</td>
+</tr>
+<tr>
+<td>*person[email]</td>
+<td>Email of the client</td>
+<td>j.l@gmail.com</td>
+</tr>
+<tr>
+<td>*person[firstname]</td>
+<td>First name of the client</td>
+<td>Julien</td>
+</tr>
+<tr>
+<td>*person[lastname]</td>
+<td>Last name of the client</td>
+<td>Mpa</td>
+</tr>
+<tr>
+<td>*person[newsletter]</td>
+<td>Client accepted newsletter</td>
+<td>true / false</td>
+</tr>
+<tr>
+<td>person[wishlist_token]</td>
+<td>Token of the client wishlist</td>
+<td>&#39;c74e5890-18ed-4651-92d6-240b986cd767&#39;</td>
+</tr>
+</tbody></table>
 
       </div>
       <div class="dark-box">
