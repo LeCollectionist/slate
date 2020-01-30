@@ -36,19 +36,19 @@ Either the house_id or the destination_id is required, not both of them at the s
 
 ### Query Parameters
 
-Parameter | Description | Example
---------- | ----------- | -------
-*request[house_id] | ID of the house | 237
-*request[destination_id] | ID of the destination | 17
-*request[end_date] | End date of the request | 2020-01-01
-*request[start_date] | Start date of the request | 2020-01-20
-*request[favorite_contact] | Favorite contact of the client | email / phone / whatsapp
-*request[phone] | Phone of the client | 0611223344
-*request[budget] | Budget of the client | 12000
-*request[people] | Number of people for the request | 12
-request[notes] | Extra information about the request | Some extra info
-*person[email] | Email of the client | email@example.com
-*person[firstname] | First name of the client | Jean
-*person[lastname] | Last name of the client | Donuts
-*person[newsletter] | Client accepted newsletter | true / false
-person[wishlist_token] | Token of the client wishlist | c74e5890-18ed-4651-92d6-240b986cd767
+Parameter | Description | Type | Example
+--------- | ----------- | ---- | -------
+*request[house_id] | ID of the house | Integer | 237
+*request[destination_id] | ID of the destination | Integer | 17
+*request[end_date] | End date of the request | String | 2020-01-01
+*request[start_date] | Start date of the request | String | 2020-01-20
+*request[favorite_contact] | Favorite contact of the client | String | email / phone / whatsapp
+*request[phone] | Phone of the client | String | 0611223344
+request[budget] | Budget of the client in EUR | Integer | 12000
+request[people] | Number of people for the request | Integer | 12
+request[notes] | Extra information about the request | String | Some extra info
+*person[email] | Email of the client | String | email@example.com
+*person[firstname] | First name of the client | String | Jean
+*person[lastname] | Last name of the client | String | Donuts
+*person[newsletter] | Client accepted newsletter | Boolean | true / false
+person[wishlist_token] | Token of the client wishlist | String | c74e5890-18ed-4651-92d6-240b986cd767
