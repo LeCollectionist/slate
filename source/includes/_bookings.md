@@ -26,7 +26,7 @@ This endpoint creates a booking for a given house
 
 ### HTTP Request
 
-`POST /api/v1/houses/:id/booking_external`
+`POST /api/v1/houses/:id/booking_externals`
 
 The `:id` parameter must be the house id.
 
@@ -64,7 +64,7 @@ This endpoint updates a booking for a given house
 
 ### HTTP Request
 
-`PUT /api/v1/houses/:house_id/booking_external/:id`
+`PUT /api/v1/houses/:house_id/booking_externals/:id`
 
 The `:house_id` parameter must be the house id.
 The `:id` parameter must be the booking id.
@@ -92,7 +92,7 @@ This endpoint deletes a booking for a given house
 
 ### HTTP Request
 
-`DELETE /api/v1/houses/:house_id/booking_external/:id`
+`DELETE /api/v1/houses/:house_id/booking_externals/:id`
 
 The `:house_id` parameter must be the house id.
 The `:id` parameter must be the booking id.
