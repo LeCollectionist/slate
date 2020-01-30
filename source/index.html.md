@@ -10,6 +10,7 @@ includes:
   - destinations
   - wishlists
   - inquiries
+  - bookings
 
 search: true
 ---
