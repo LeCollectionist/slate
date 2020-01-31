@@ -1297,7 +1297,7 @@ In this case, it will respond with the entire collection.</p>
 </span></code></pre>
 <p>This endpoint creates a booking for a given house</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>POST /api/v1/houses/:id/booking_externals</code></p>
+<p><code>POST /(fr;en)/api/v1/houses/:id/booking_externals</code></p>
 
 <p>The <code>:id</code> parameter must be the house id.</p>
 <h3 id='query-parameters'>Query Parameters</h3>
@@ -1312,19 +1312,19 @@ In this case, it will respond with the entire collection.</p>
 <tr>
 <td>booking_external[check_in_date]</td>
 <td>Check-in date of the booking</td>
-<td>string</td>
+<td>String</td>
 <td>&#39;2020-01-01&#39;</td>
 </tr>
 <tr>
 <td>booking_external[check_out_date]</td>
 <td>Check-out date of the booking</td>
-<td>string</td>
+<td>String</td>
 <td>&#39;2020-01-20&#39;</td>
 </tr>
 <tr>
 <td>bonder</td>
 <td>Token to authenticate Bonder</td>
-<td>string</td>
+<td>String</td>
 <td>&#39;c74e5890-18ed-4651-92d6-240b986cd767&#39;</td>
 </tr>
 </tbody></table>
@@ -1351,10 +1351,11 @@ In this case, it will respond with the entire collection.</p>
 </span></code></pre>
 <p>This endpoint updates a booking for a given house</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>PUT /api/v1/houses/:house_id/booking_externals/:id</code></p>
+<p><code>PUT /(fr;en)/api/v1/houses/:house_id/booking_externals/:id</code></p>
 
-<p>The <code>:house_id</code> parameter must be the house id.
-The <code>:id</code> parameter must be the booking id.</p>
+<p>The <code>:house_id</code> parameter must be the house id.</p>
+
+<p>The <code>:id</code> parameter must be the booking id.</p>
 <h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -1367,19 +1368,19 @@ The <code>:id</code> parameter must be the booking id.</p>
 <tr>
 <td>booking_external[check_in_date]</td>
 <td>Check-in date of the booking</td>
-<td>string</td>
+<td>String</td>
 <td>&#39;2020-01-01&#39;</td>
 </tr>
 <tr>
 <td>booking_external[check_out_date]</td>
 <td>Check-out date of the booking</td>
-<td>string</td>
+<td>String</td>
 <td>&#39;2020-01-20&#39;</td>
 </tr>
 <tr>
 <td>bonder</td>
 <td>Token to authenticate Bonder</td>
-<td>string</td>
+<td>String</td>
 <td>&#39;c74e5890-18ed-4651-92d6-240b986cd767&#39;</td>
 </tr>
 </tbody></table>
@@ -1390,15 +1391,31 @@ The <code>:id</code> parameter must be the booking id.</p>
 <p>Response:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="err">status</span><span class="p">:</span><span class="w"> </span><span class="err">'ok'</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint deletes a booking for a given house</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE /api/v1/houses/:house_id/booking_externals/:id</code></p>
+<p><code>DELETE /(fr;en)/api/v1/houses/:house_id/booking_externals/:id</code></p>
 
 <p>The <code>:house_id</code> parameter must be the house id.
 The <code>:id</code> parameter must be the booking id.</p>
+<h3 id='query-parameters-3'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bonder</td>
+<td>Token to authenticate Bonder</td>
+<td>String</td>
+<td>&#39;c74e5890-18ed-4651-92d6-240b986cd767&#39;</td>
+</tr>
+</tbody></table>
 
       </div>
       <div class="dark-box">
