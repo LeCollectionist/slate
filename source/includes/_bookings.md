@@ -26,7 +26,7 @@ This endpoint creates a booking for a given house
 
 ### HTTP Request
 
-`POST /api/v1/houses/:id/booking_externals`
+`POST /(fr;en)/api/v1/houses/:id/booking_externals`
 
 The `:id` parameter must be the house id.
 
@@ -34,9 +34,9 @@ The `:id` parameter must be the house id.
 
 Parameter | Description | Type | Example
 --------- | ----------- | ------- | -------
-booking_external[check_in_date] | Check-in date of the booking | string | '2020-01-01'
-booking_external[check_out_date] | Check-out date of the booking | string | '2020-01-20'
-bonder | Token to authenticate Bonder | string | 'c74e5890-18ed-4651-92d6-240b986cd767'
+booking_external[check_in_date] | Check-in date of the booking | String | '2020-01-01'
+booking_external[check_out_date] | Check-out date of the booking | String | '2020-01-20'
+bonder | Token to authenticate Bonder | String | 'c74e5890-18ed-4651-92d6-240b986cd767'
 
 ## Update a booking
 <span class='badge badge-green'>Localized</span>
@@ -64,18 +64,19 @@ This endpoint updates a booking for a given house
 
 ### HTTP Request
 
-`PUT /api/v1/houses/:house_id/booking_externals/:id`
+`PUT /(fr;en)/api/v1/houses/:house_id/booking_externals/:id`
 
 The `:house_id` parameter must be the house id.
+
 The `:id` parameter must be the booking id.
 
 ### Query Parameters
 
 Parameter | Description | Type | Example
 --------- | ----------- | ------- | -------
-booking_external[check_in_date] | Check-in date of the booking | string | '2020-01-01'
-booking_external[check_out_date] | Check-out date of the booking | string | '2020-01-20'
-bonder | Token to authenticate Bonder | string | 'c74e5890-18ed-4651-92d6-240b986cd767'
+booking_external[check_in_date] | Check-in date of the booking | String | '2020-01-01'
+booking_external[check_out_date] | Check-out date of the booking | String | '2020-01-20'
+bonder | Token to authenticate Bonder | String | 'c74e5890-18ed-4651-92d6-240b986cd767'
 
 ## Delete a booking
 <span class='badge badge-green'>Localized</span>
@@ -84,7 +85,7 @@ bonder | Token to authenticate Bonder | string | 'c74e5890-18ed-4651-92d6-240b98
 
 ```json
 {
-  status: 'ok'
+  "status": "ok"
 }
 ```
 
@@ -92,7 +93,13 @@ This endpoint deletes a booking for a given house
 
 ### HTTP Request
 
-`DELETE /api/v1/houses/:house_id/booking_externals/:id`
+`DELETE /(fr;en)/api/v1/houses/:house_id/booking_externals/:id`
 
 The `:house_id` parameter must be the house id.
 The `:id` parameter must be the booking id.
+
+### Query Parameters
+
+Parameter | Description | Type | Example
+--------- | ----------- | ------- | -------
+bonder | Token to authenticate Bonder | String | 'c74e5890-18ed-4651-92d6-240b986cd767'
