@@ -104,3 +104,62 @@ The `:id` parameter must be the booking id.
 Parameter | Description | Type | Example
 --------- | ----------- | ------- | -------
 bonder | Token to authenticate Bonder | String | 'c74e5890-18ed-4651-92d6-240b986cd767'
+
+## Get All Bookings of a house
+<span class='badge badge-blue'>Paginated</span>
+<span class='badge badge-green'>Localized</span>
+
+> Response:
+
+```json
+{
+  "data": [
+    {
+      "id": "4567",
+      "type": "booking",
+      "attributes": {
+        "checkInDate": "2020-02-08",
+        "checkOutDate": "2020-02-22",
+        "checkInTime": 17,
+        "checkOutTime": 10
+      }
+    },
+    {
+      "id": "4569",
+      "type": "booking",
+      "attributes": {
+        "checkInDate": "2019-12-28",
+        "checkOutDate": "2020-01-04",
+        "checkInTime": 17,
+        "checkOutTime": 10
+      }
+    },
+    {
+      "id": "6789",
+      "type": "booking",
+      "attributes": {
+        "checkInDate": "2019-12-21",
+        "checkOutDate": "2019-12-28",
+        "checkInTime": 17,
+        "checkOutTime": 10
+      }
+    },
+    ...
+  ],
+  "meta": {
+    "current_page": 1,
+    "next_page": 2,
+    "per_page": 25,
+    "prev_page": null,
+    "total_pages": 44,
+    "total_count": 567
+  }
+```
+
+This endpoint retrieves all the bookings of a house.
+
+### HTTP Request
+
+`GET /fr/api/v1/houses/:identifier/bookings`
+
+The `:identifier` parameter must be the house id or localized slug.
