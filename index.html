@@ -308,6 +308,14 @@
                   </li>
               </ul>
           </li>
+          <li>
+            <a href="#period-pricings" class="toc-h1 toc-link" data-title="Period pricings">Period pricings</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-period-pricings" class="toc-h2 toc-link" data-title="Get Period pricings">Get Period pricings</a>
+                  </li>
+              </ul>
+          </li>
       </ul>
         <ul class="toc-footer">
             <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
@@ -1475,6 +1483,74 @@ In this case, it will respond with the entire collection.</p>
 <p><code>GET /fr/api/v1/houses/:identifier/bookings</code></p>
 
 <p>The <code>:identifier</code> parameter must be the house id or localized slug.</p>
+<h1 id='period-pricings'>Period pricings</h1><h2 id='get-period-pricings'>Get Period pricings</h2>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"39"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"periodPricing"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"periodType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"weekly_by_saturday"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"minimumDuration"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">200.0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"houseId"</span><span class="p">:</span><span class="w"> </span><span class="mi">937</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"startAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-14"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"endAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-21"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nightCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"40"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"periodPricing"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"periodType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"weekly_by_sunday"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"minimumDuration"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">300.0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"houseId"</span><span class="p">:</span><span class="w"> </span><span class="mi">937</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"startAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-22"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"endAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-29"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nightCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves the pricings of the given period.</p>
+
+<p><code>start_at</code> and <code>end_at</code> parameters must be valid date as <code>YYYY-MM-DD</code>.</p>
+
+<p><code>start_at</code> parameter must be inferior to <code>end_at</code> parameter.</p>
+
+<p>If the given period is not fully covered by the house periods, it will ends as &#39;Bad request&#39; response (400).</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET /api/v1/houses/:id/period_pricings?start_at=2020-03-14&amp;end_at=2020-03-29</code></p>
+
+<p>*: Mandatory</p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>start_at</td>
+<td>Start of the period</td>
+<td>Date as a string</td>
+<td>2020-01-01</td>
+</tr>
+<tr>
+<td>end_at</td>
+<td>End of the period</td>
+<td>Date as a string</td>
+<td>2020-01-10</td>
+</tr>
+</tbody></table>
 
       </div>
       <div class="dark-box">
