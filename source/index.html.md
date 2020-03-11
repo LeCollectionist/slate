@@ -11,6 +11,7 @@ includes:
   - wishlists
   - inquiries
   - bookings
+  - period_pricings
 
 search: true
 ---
