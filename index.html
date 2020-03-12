@@ -316,6 +316,14 @@
                   </li>
               </ul>
           </li>
+          <li>
+            <a href="#contacts" class="toc-h1 toc-link" data-title="Contacts">Contacts</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-a-contact" class="toc-h2 toc-link" data-title="Create a contact">Create a contact</a>
+                  </li>
+              </ul>
+          </li>
       </ul>
         <ul class="toc-footer">
             <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
@@ -1559,6 +1567,72 @@ In this case, it will respond with the entire collection.</p>
 <td>Currency of the price</td>
 <td>String</td>
 <td>USD</td>
+</tr>
+</tbody></table>
+<h1 id='contacts'>Contacts</h1><h2 id='create-a-contact'>Create a contact</h2>
+<p><span class='badge badge-green'>Localized</span></p>
+
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"178"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"contact"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Julien"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Viviani"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0134567890"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"j.viviani@gmail.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"locale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A message"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint creates a contact</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST (fr;en)/api/v1/contacts</code></p>
+
+<p>*: Mandatory</p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>*contact[first_name]</td>
+<td>First name of the contact sender</td>
+<td>String</td>
+<td>Julien</td>
+</tr>
+<tr>
+<td>*contact[last_name]</td>
+<td>Last name of the contact sender</td>
+<td>String</td>
+<td>Viviani</td>
+</tr>
+<tr>
+<td>*contact[email]</td>
+<td>Email of the contact sender</td>
+<td>String</td>
+<td>j.viviani@gmail.com</td>
+</tr>
+<tr>
+<td>*contact[phone]</td>
+<td>Phone of the contact sender</td>
+<td>String</td>
+<td>0123456789</td>
+</tr>
+<tr>
+<td>*contact[message]</td>
+<td>Message</td>
+<td>String</td>
+<td>A message</td>
 </tr>
 </tbody></table>
 
