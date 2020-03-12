@@ -12,6 +12,7 @@ includes:
   - inquiries
   - bookings
   - period_pricings
+  - contacts
 
 search: true
 ---
