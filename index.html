@@ -1499,6 +1499,7 @@ In this case, it will respond with the entire collection.</p>
         </span><span class="s2">"houseId"</span><span class="p">:</span><span class="w"> </span><span class="mi">937</span><span class="p">,</span><span class="w">
         </span><span class="s2">"startAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-14"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"endAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-21"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"nightCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
@@ -1512,6 +1513,7 @@ In this case, it will respond with the entire collection.</p>
         </span><span class="s2">"houseId"</span><span class="p">:</span><span class="w"> </span><span class="mi">937</span><span class="p">,</span><span class="w">
         </span><span class="s2">"startAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-22"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"endAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-29"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"nightCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -1523,6 +1525,8 @@ In this case, it will respond with the entire collection.</p>
 <p><code>start_at</code> and <code>end_at</code> parameters must be valid date as <code>YYYY-MM-DD</code>.</p>
 
 <p><code>start_at</code> parameter must be inferior to <code>end_at</code> parameter.</p>
+
+<p><code>currency</code> parameter must be a valid currency in <code>EUR/USD/GBP/CHF</code>.</p>
 
 <p>If the given period is not fully covered by the house periods, it will ends as &#39;Bad request&#39; response (400).</p>
 <h3 id='http-request'>HTTP Request</h3>
@@ -1549,6 +1553,12 @@ In this case, it will respond with the entire collection.</p>
 <td>End of the period</td>
 <td>Date as a string</td>
 <td>2020-01-10</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>Currency of the price</td>
+<td>String</td>
+<td>USD</td>
 </tr>
 </tbody></table>
 
