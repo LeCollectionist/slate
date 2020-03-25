@@ -13,7 +13,9 @@
     "attributes": {
       "bathrooms": 10,
       "bedrooms": 5,
-      "budget": 10000,
+      "minBudget": 10000,
+      "maxBudget": 20000,
+      "currency": 'EUR',
       "createdAt": "2020-03-18T17:02:39.252+01:00",
       "destinationId": 17,
       "email": "test@test.fr",
@@ -49,7 +51,9 @@ Parameter | Description | Type | Example
 --------- | ----------- | ---- | -------
 waiting_search[bathrooms] | Bathroom filter | integer | 5
 waiting_search[bedrooms] | Bedroom filter | integer | 7
-waiting_search[budget] | Budget filter | integer | 2000
+waiting_search[min_budget] | Min. Budget filter | integer | 2000
+waiting_search[max_budget] | Max. Budget filter | integer | 5000
+waiting_search[currency] | Currency filter | string | 5000 (default: EUR)
 waiting_search[people] | People filter | integer | 10
 *waiting_search[destination_id] | Destination filter | integer | 17
 *waiting_search[start_at] | Start of the searched booking | string | '2020-01-10'
