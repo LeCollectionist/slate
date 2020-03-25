@@ -13,6 +13,7 @@ includes:
   - bookings
   - period_pricings
   - contacts
+  - waiting_searches
 
 search: true
 ---
