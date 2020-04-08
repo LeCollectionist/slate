@@ -19,13 +19,13 @@
       "createdAt": "2020-03-18T17:02:39.252+01:00",
       "destinationId": 17,
       "email": "test@test.fr",
-      "endAt": "2020-01-10T00:00:00.000+01:00",
+      "checkOutDate": "2020-01-10T00:00:00.000+01:00",
       "firstName": "Julien",
       "lastName": "Viviani",
       "locale": "fr",
       "people": 5,
       "phone": null,
-      "startAt": "2020-01-01T00:00:00.000+01:00",
+      "checkInDate": "2020-01-01T00:00:00.000+01:00",
       "userId": 199,
       "updatedAt": "2020-03-18T17:02:39.252+01:00"
     }
@@ -56,8 +56,8 @@ waiting_search[max_budget] | Max. Budget filter | integer | 5000
 waiting_search[currency] | Currency filter | string | 5000 (default: EUR)
 waiting_search[people] | People filter | integer | 10
 *waiting_search[destination_id] | Destination filter | integer | 17
-*waiting_search[start_at] | Start of the searched booking | string | '2020-01-10'
-*waiting_search[end_at] | End of the searched booking | string | '2020-01-20'
+*waiting_search[check_in_date] | Start of the searched booking | string | '2020-01-10'
+*waiting_search[check_out_date] | End of the searched booking | string | '2020-01-20'
 (*)waiting_search[email] | Email of the customer | string | j.viviani@gmail.com
 (*)waiting_search[first_name] | First name of the customer | string | Julien
 (*)waiting_search[last_name] | Last name of the customer | string | Viviani
