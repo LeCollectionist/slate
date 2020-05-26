@@ -484,3 +484,75 @@ This endpoint retrieves all the booking flights of the house.
 ### HTTP Request
 
 `GET /fr/api/v1/houses/:identifier/booking_flights`
+
+## Get Periods
+<span class='badge badge-blue'>Paginated</span>
+
+> Response:
+
+```json
+{
+  "data": [
+    {
+      "id": "4567",
+      "type": "period",
+      "attributes": {
+        "currency": "EUR",
+        "endAt": "2020-05-19",
+        "houseId": 7,
+        "minimumDuration": 4,
+        "periodType": "nightly",
+        "price": 500.0,
+        "startAt": "2020-05-10"
+      }
+    },
+    {
+      "id": "678",
+      "type": "period",
+      "attributes": {
+        "currency": "EUR",
+        "endAt": "2020-05-30",
+        "houseId": 7,
+        "minimumDuration": 1,
+        "periodType": "weekly_by_saturday",
+        "price": 1000.0,
+        "startAt": "2020-05-23"
+      }
+    },
+    {
+      "id": "7890",
+      "type": "period",
+      "attributes": {
+        "currency": "EUR",
+        "endAt": "2020-06-21",
+        "houseId": 7,
+        "minimumDuration": 1,
+        "periodType": "weekly_by_sunday",
+        "price": 4000.0,
+        "startAt": "2020-06-07"
+      }
+    }
+  ],
+  "meta": {
+    "current_page": 1,
+    "next_page": null,
+    "per_page": 25,
+    "prev_page": null,
+    "total_pages": 1,
+    "total_count": 3
+  }
+}
+```
+
+This endpoint retrieves all the periods of the current year for the house.
+
+### HTTP Request
+
+`GET /fr/api/v1/houses/:identifier/periods`
+
+### Query Parameters
+
+Parameter | Description | Example
+--------- | ----------- | -------
+year | Year of the periods | 2021
+currency | Currency of the periods | USD

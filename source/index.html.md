@@ -7,6 +7,7 @@ toc_footers:
 includes:
   - intro
   - houses
+  - house_periods
   - destinations
   - wishlists
   - inquiries
