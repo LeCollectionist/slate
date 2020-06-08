@@ -14,6 +14,7 @@ includes:
   - bookings
   - period_pricings
   - contacts
+  - contracts
 
 search: true
 ---
