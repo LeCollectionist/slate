@@ -338,6 +338,28 @@
                   </li>
               </ul>
           </li>
+          <li>
+            <a href="#contracts" class="toc-h1 toc-link" data-title="Contracts">Contracts</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#client-update-contract-as-a-person" class="toc-h2 toc-link" data-title="Client : Update contract as a person">Client : Update contract as a person</a>
+                  </li>
+                  <li>
+                    <a href="#client-update-contract-as-a-company" class="toc-h2 toc-link" data-title="Client : Update contract as a company">Client : Update contract as a company</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#contracts-2" class="toc-h1 toc-link" data-title="Contracts">Contracts</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#owner-update-contract-as-a-person" class="toc-h2 toc-link" data-title="Owner : Update contract as a person">Owner : Update contract as a person</a>
+                  </li>
+                  <li>
+                    <a href="#owner-update-contract-as-a-company" class="toc-h2 toc-link" data-title="Owner : Update contract as a company">Owner : Update contract as a company</a>
+                  </li>
+              </ul>
+          </li>
       </ul>
         <ul class="toc-footer">
             <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
@@ -1882,6 +1904,430 @@ In this case, it will respond with the entire collection.</p>
 <td>Message</td>
 <td>String</td>
 <td>A message</td>
+</tr>
+</tbody></table>
+<h1 id='contracts'>Contracts</h1><h2 id='client-update-contract-as-a-person'>Client : Update contract as a person</h2>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4004"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"contract"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint updates the contract as a client.</p>
+
+<p>The user must be logged in while doing this request.</p>
+
+<p>the <code>persist_user_profile</code> parameter allows the client to save this informations into his LC account.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p>`PUT /api/v1/client_contracts/:id</p>
+
+<p>*: Mandatory</p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>*contract[client_firstname]</td>
+<td>First name of the client</td>
+<td>string</td>
+<td>Julien</td>
+</tr>
+<tr>
+<td>*contract[client_lastname]</td>
+<td>Last name of the client</td>
+<td>string</td>
+<td>Viviani</td>
+</tr>
+<tr>
+<td>*contract[client_address]</td>
+<td>Address of the client</td>
+<td>string</td>
+<td>126 Rue de Provence</td>
+</tr>
+<tr>
+<td>*contract[client_postal_code]</td>
+<td>Postal code of the client</td>
+<td>string</td>
+<td>75008</td>
+</tr>
+<tr>
+<td>*contract[client_city]</td>
+<td>City of the client</td>
+<td>string</td>
+<td>Paris</td>
+</tr>
+<tr>
+<td>*contract[client_country]</td>
+<td>Country of the client</td>
+<td>string (alpha2 country code)</td>
+<td>FR</td>
+</tr>
+<tr>
+<td>*contract[client_phone]</td>
+<td>Phone of the client</td>
+<td>string</td>
+<td>01 73 03 02 02</td>
+</tr>
+<tr>
+<td>contract[client_phone2]</td>
+<td>Secondary phone of the client</td>
+<td>string</td>
+<td>01 73 03 02 03</td>
+</tr>
+<tr>
+<td>*contract[client_email]</td>
+<td>Email of the client</td>
+<td>string</td>
+<td>julien@viviani.fr</td>
+</tr>
+<tr>
+<td>contract[client_email2]</td>
+<td>Secondary email of the client</td>
+<td>string</td>
+<td>adrien@lerpscher.fr</td>
+</tr>
+<tr>
+<td>*contract[client_birthdate]</td>
+<td>Birthdate of the client</td>
+<td>date (YYYY-MM-DD)</td>
+<td>1988-11-08</td>
+</tr>
+<tr>
+<td>persist_user_profile</td>
+<td>Updates the client account with the given informations</td>
+<td>presence</td>
+<td>true/1</td>
+</tr>
+</tbody></table>
+<h2 id='client-update-contract-as-a-company'>Client : Update contract as a company</h2>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4004"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"contract"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint updates the contract as a client company.</p>
+
+<p>The user must be logged in while doing this request.</p>
+
+<p>The client must choose between 2 ways of update :
+  - With an existing company by filling the <code>*contract[client_company_id]</code> parameter.
+  OR
+  - Without an existing company and by filling all the others mandatory parameters.</p>
+
+<p>the <code>persist_company</code> parameter allows the client to save this informations about his company.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p>`PUT /api/v1/client_contracts/:id</p>
+
+<p>*: Mandatory</p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>*contract[client_company_name]</td>
+<td>Name of the client company</td>
+<td>string</td>
+<td>Le Collectionist</td>
+</tr>
+<tr>
+<td>*contract[client_company_siret]</td>
+<td>SIRET of the client company</td>
+<td>string (14)</td>
+<td>01234567891234</td>
+</tr>
+<tr>
+<td>*contract[client_company_address]</td>
+<td>Address of the client</td>
+<td>string</td>
+<td>126 Rue de Provence</td>
+</tr>
+<tr>
+<td>*contract[client_company_postal_code]</td>
+<td>Postal code of the client</td>
+<td>string</td>
+<td>75008</td>
+</tr>
+<tr>
+<td>*contract[client_company_city]</td>
+<td>City of the client</td>
+<td>string</td>
+<td>Paris</td>
+</tr>
+<tr>
+<td>*contract[client_company_country]</td>
+<td>Country of the client</td>
+<td>string (alpha2 country code)</td>
+<td>FR</td>
+</tr>
+<tr>
+<td>*contract[client_company_phone]</td>
+<td>Phone of the client</td>
+<td>string</td>
+<td>01 73 03 02 02</td>
+</tr>
+<tr>
+<td>*contract[client_company_representative_gender]</td>
+<td>Gender of the representative client</td>
+<td>string (male/female/unknown)</td>
+<td>female</td>
+</tr>
+<tr>
+<td>*contract[client_company_representative_firstname]</td>
+<td>First name of the representative client</td>
+<td>Julien</td>
+<td></td>
+</tr>
+<tr>
+<td>*contract[client_company_representative_lastname]</td>
+<td>Last name of the representative client</td>
+<td>Viviani</td>
+<td></td>
+</tr>
+<tr>
+<td>*contract[client_company_id]</td>
+<td>Last name of the representative client</td>
+<td>Viviani</td>
+<td></td>
+</tr>
+<tr>
+<td>persist_company</td>
+<td>Creates a related company to the client</td>
+<td>presence</td>
+<td>true/1</td>
+</tr>
+</tbody></table>
+<h1 id='contracts-2'>Contracts</h1><h2 id='owner-update-contract-as-a-person'>Owner : Update contract as a person</h2>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4004"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"contract"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint updates the contract as a owner.</p>
+
+<p>The user must be logged in while doing this request.</p>
+
+<p>the <code>persist_user_profile</code> parameter allows the owner to save this informations into his LC account.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p>`PUT /api/v1/owner_contracts/:id</p>
+
+<p>*: Mandatory</p>
+<h3 id='query-parameters-3'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>*contract[owner_firstname]</td>
+<td>First name of the owner</td>
+<td>string</td>
+<td>Julien</td>
+</tr>
+<tr>
+<td>*contract[owner_lastname]</td>
+<td>Last name of the owner</td>
+<td>string</td>
+<td>Viviani</td>
+</tr>
+<tr>
+<td>*contract[owner_address]</td>
+<td>Address of the owner</td>
+<td>string</td>
+<td>126 Rue de Provence</td>
+</tr>
+<tr>
+<td>*contract[owner_postal_code]</td>
+<td>Postal code of the owner</td>
+<td>string</td>
+<td>75008</td>
+</tr>
+<tr>
+<td>*contract[owner_city]</td>
+<td>City of the owner</td>
+<td>string</td>
+<td>Paris</td>
+</tr>
+<tr>
+<td>*contract[owner_country]</td>
+<td>Country of the owner</td>
+<td>string (alpha2 country code)</td>
+<td>FR</td>
+</tr>
+<tr>
+<td>*contract[owner_phone]</td>
+<td>Phone of the owner</td>
+<td>string</td>
+<td>01 73 03 02 02</td>
+</tr>
+<tr>
+<td>*contract[owner_email]</td>
+<td>Email of the owner</td>
+<td>string</td>
+<td>julien@viviani.fr</td>
+</tr>
+<tr>
+<td>persist_user_profile</td>
+<td>Updates the owner account with the given informations</td>
+<td>presence</td>
+<td>true/1</td>
+</tr>
+</tbody></table>
+<h2 id='owner-update-contract-as-a-company'>Owner : Update contract as a company</h2>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4004"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"contract"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint updates the contract as a client company.</p>
+
+<p>The user must be logged in while doing this request.</p>
+
+<p>The client must choose between 2 ways of update :
+  - With an existing company by filling the <code>*contract[owner_company_id]</code> parameter.
+  OR
+  - Without an existing company and by filling all the others mandatory parameters.</p>
+
+<p>the <code>persist_company</code> parameter allows the owner to save this informations about his company.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p>`PUT /api/v1/owner_contracts/:id</p>
+
+<p>*: Mandatory</p>
+<h3 id='query-parameters-4'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>*contract[owner_company_name]</td>
+<td>Name of the owner company</td>
+<td>string</td>
+<td>Le Collectionist</td>
+</tr>
+<tr>
+<td>*contract[owner_company_siret]</td>
+<td>SIRET of the owner company</td>
+<td>string (14)</td>
+<td>01234567891234</td>
+</tr>
+<tr>
+<td>*contract[owner_company_address]</td>
+<td>Address of the owner</td>
+<td>string</td>
+<td>126 Rue de Provence</td>
+</tr>
+<tr>
+<td>*contract[owner_company_postal_code]</td>
+<td>Postal code of the owner</td>
+<td>string</td>
+<td>75008</td>
+</tr>
+<tr>
+<td>*contract[owner_company_city]</td>
+<td>City of the owner</td>
+<td>string</td>
+<td>Paris</td>
+</tr>
+<tr>
+<td>*contract[owner_company_country]</td>
+<td>Country of the owner</td>
+<td>string (alpha2 country code)</td>
+<td>FR</td>
+</tr>
+<tr>
+<td>*contract[owner_company_phone]</td>
+<td>Phone of the owner</td>
+<td>string</td>
+<td>01 73 03 02 02</td>
+</tr>
+<tr>
+<td>*contract[owner_company_representative_gender]</td>
+<td>Gender of the representative owner</td>
+<td>string (male/female/unknown)</td>
+<td>female</td>
+</tr>
+<tr>
+<td>*contract[owner_company_representative_firstname]</td>
+<td>First name of the representative owner</td>
+<td>Julien</td>
+<td></td>
+</tr>
+<tr>
+<td>*contract[owner_company_representative_lastname]</td>
+<td>Last name of the representative owner</td>
+<td>Viviani</td>
+<td></td>
+</tr>
+<tr>
+<td>*contract[owner_company_id]</td>
+<td>Last name of the representative owner</td>
+<td>Viviani</td>
+<td></td>
+</tr>
+<tr>
+<td>*contract[owner_company_bic]</td>
+<td>Bank BIC of the owner company</td>
+<td>string (8..11)</td>
+<td>12345678</td>
+</tr>
+<tr>
+<td>*contract[owner_company_iban]</td>
+<td>Bank IBAN of the owner company</td>
+<td>string (27)</td>
+<td>123456789012345678901234567</td>
+</tr>
+<tr>
+<td>*contract[owner_company_account_owner]</td>
+<td>Name of the owner account company</td>
+<td>string</td>
+<td>Adrien Lerpscher</td>
+</tr>
+<tr>
+<td>*contract[owner_company_email]</td>
+<td>Email of the owner company</td>
+<td>string</td>
+<td>viviani@jlerp.fr</td>
+</tr>
+<tr>
+<td>persist_company</td>
+<td>Creates a related company to the owner</td>
+<td>presence</td>
+<td>true/1</td>
 </tr>
 </tbody></table>
 
