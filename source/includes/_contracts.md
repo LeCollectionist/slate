@@ -36,6 +36,7 @@ Parameter | Description | Type | Example
 *contract[client_city] | City of the client | string | Paris
 *contract[client_country] | Country of the client | string (alpha2 country code) | FR
 *contract[client_phone] | Phone of the client | string | 01 73 03 02 02
+*contract[client_nationality] | Nationality of the client | string (alpha2 country code) | FR
 contract[client_phone2] | Secondary phone of the client | string | 01 73 03 02 03
 *contract[client_email] | Email of the client | string | julien@viviani.fr
 contract[client_email2] | Secondary email of the client | string | adrien@lerpscher.fr
