@@ -71,7 +71,7 @@ the `persist_company` parameter allows the client to save this informations abou
 
 ### HTTP Request
 
-`PUT /api/v1/client_contracts/:id`
+`PUT /api/v1/client_contracts/:id?context=company`
 
 *: Mandatory
 
@@ -160,7 +160,7 @@ the `persist_company` parameter allows the owner to save this informations about
 
 ### HTTP Request
 
-`PUT /api/v1/owner_contracts/:id`
+`PUT /api/v1/owner_contracts/:id?context=company`
 
 *: Mandatory
 
