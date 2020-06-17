@@ -44,47 +44,6 @@ This endpoint retrieves all the contracts as client of the current user.
 
 `GET /fr/api/v1/user/client_contracts`
 
-
-## Get Owner Contracts
-<span class='badge badge-blue'>Paginated</span>
-
-> Response:
-
-```json
-{
-  "data": [
-    {
-      "id": "3970",
-      "type": "contract",
-      "attributes": {
-        "checkInDate": "2020-05-20",
-        "checkInTime": "17:00",
-        "checkOutDate": "2020-05-28",
-        "checkOutTime": "10:00",
-        "houseName": "Villa Lumière",
-        "houseOldName": "the two sisters",
-        "destinationName": "Gordes & alentours"
-      }
-    }
-    }
-  ],
-  "meta": {
-    "current_page": 1,
-    "next_page": null,
-    "per_page": 25,
-    "prev_page": null,
-    "total_pages": 1,
-    "total_count": 1
-  }
-}
-```
-
-This endpoint retrieves all the contracts as owner of the current user.
-
-### HTTP Request
-
-`GET /fr/api/v1/user/owner_contracts`
-
 ## Get Owner Contracts
 <span class='badge badge-blue'>Paginated</span>
 
