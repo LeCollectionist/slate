@@ -230,6 +230,23 @@
               </ul>
           </li>
           <li>
+            <a href="#current-user" class="toc-h1 toc-link" data-title="Current User">Current User</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-client-contracts" class="toc-h2 toc-link" data-title="Get Client Contracts">Get Client Contracts</a>
+                  </li>
+                  <li>
+                    <a href="#get-owner-contracts" class="toc-h2 toc-link" data-title="Get Owner Contracts">Get Owner Contracts</a>
+                  </li>
+                  <li>
+                    <a href="#get-owner-contracts-2" class="toc-h2 toc-link" data-title="Get Owner Contracts">Get Owner Contracts</a>
+                  </li>
+                  <li>
+                    <a href="#get-companies" class="toc-h2 toc-link" data-title="Get Companies">Get Companies</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#houses" class="toc-h1 toc-link" data-title="Houses">Houses</a>
               <ul class="toc-list-h2">
                   <li>
@@ -496,6 +513,162 @@ In this case, it will respond with the entire collection.</p>
 <li>en</li>
 <li>fr</li>
 </ul>
+<h1 id='current-user'>Current User</h1>
+<p>All those endpoints retrieves resources of the current user.</p>
+
+<p>The user is logged in by the authentication headers.</p>
+<h2 id='get-client-contracts'>Get Client Contracts</h2>
+<p><span class='badge badge-blue'>Paginated</span></p>
+
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3970"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"contract"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"checkInDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-20"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"checkInTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"checkOutDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-28"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"checkOutTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"houseName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Villa Lumière"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"houseOldName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"the two sisters"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"destinationName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gordes &amp; alentours"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"current_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"per_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"prev_page"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all the contracts as client of the current user.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET /fr/api/v1/user/client_contracts</code></p>
+<h2 id='get-owner-contracts'>Get Owner Contracts</h2>
+<p><span class='badge badge-blue'>Paginated</span></p>
+
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3970"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"contract"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"checkInDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-20"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"checkInTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"checkOutDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-28"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"checkOutTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"houseName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Villa Lumière"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"houseOldName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"the two sisters"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"destinationName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gordes &amp; alentours"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"current_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"per_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"prev_page"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all the contracts as owner of the current user.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET /fr/api/v1/user/owner_contracts</code></p>
+<h2 id='get-owner-contracts-2'>Get Owner Contracts</h2>
+<p><span class='badge badge-blue'>Paginated</span></p>
+
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3970"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"contract"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"checkInDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-20"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"checkInTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"checkOutDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-28"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"checkOutTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"houseName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Villa Lumière"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"houseOldName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"the two sisters"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"destinationName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gordes &amp; alentours"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"current_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"per_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"prev_page"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all the contracts as owner of the current user.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET /fr/api/v1/user/owner_contracts</code></p>
+<h2 id='get-companies'>Get Companies</h2>
+<p><span class='badge badge-blue'>Paginated</span></p>
+
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"company"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"accountOwner"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"126 Rue de Provence"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bic"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Paris"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FR"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-06-15T19:42:47.820+02:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"contact@lecollectionist.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"iban"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LeCollectionist"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0123456789"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"postalCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"75008"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"representativeFirstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Julien"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"representativeGender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"male"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"representativeLastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Viviani"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"siret"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01234567891231"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-06-15T19:42:47.820+02:00"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"current_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"per_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"prev_page"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all the companies of the current user</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET /fr/api/v1/user/companies</code></p>
 <h1 id='houses'>Houses</h1>
 <p>For all this endpoints, the <code>:identifier</code> can be the <code>id</code> or the localized <code>slug</code>.</p>
 
