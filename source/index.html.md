@@ -6,6 +6,7 @@ toc_footers:
 
 includes:
   - intro
+  - current_user
   - houses
   - house_periods
   - destinations
