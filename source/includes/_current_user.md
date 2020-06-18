@@ -132,3 +132,76 @@ This endpoint retrieves all the companies of the current user
 ### HTTP Request
 
 `GET /fr/api/v1/user/companies`
+
+## Get Client Houses
+<span class='badge badge-blue'>Paginated</span>
+
+> Response:
+
+```json
+{
+  "data": [
+    {
+      "id": "3485",
+      "type": "house",
+      "attributes": {
+        "bathrooms": 2,
+        "bedrooms": 4,
+        "capacity": 8,
+        "description": null,
+        "destinationId": 436,
+        "displayAvailabilities": true,
+        "displayPrices": true,
+        "exclusivity": false,
+        "flexibleCancelation": false,
+        "domainSurface": 600,
+        "gpslatitude": "43.925534",
+        "gpslongitude": "5.251559",
+        "housekeeping": "mid_stay",
+        "housekeepingHours": "3_hours",
+        "leadText": null,
+        "licenceNumber": null,
+        "minimumStayHighSeason": 7,
+        "minimumStayLowSeason": 3,
+        "name": "Mas des Anges",
+        "onlineReservation": false,
+        "slug": {
+          "en": "mas-des-anges-gordes-surroundings",
+          "fr": "mas-des-anges-gordes-alentours"
+        },
+        "state": "offboarded",
+        "surface": 170,
+        "surrounding": null,
+        "firstPhotoUrl": "production/uploads/photos/house-3485/2019-12-16-01f7de533067d924c6a4d82fd938ba47.jpeg",
+        "featuredPhotoUrl": null,
+        "maxPrice": {
+          "CHF": 779.0,
+          "EUR": 728.0,
+          "GBP": 653.0,
+          "USD": 823.0
+        },
+        "minPrice": {
+          "CHF": 492.0,
+          "EUR": 460.0,
+          "GBP": 412.0,
+          "USD": 520.0
+        }
+      }
+    }
+  ],
+  "meta": {
+    "current_page": 1,
+    "next_page": null,
+    "per_page": 25,
+    "prev_page": null,
+    "total_pages": 1,
+    "total_count": 1
+  }
+}
+```
+
+This endpoint retrieves all the houses if the current user is an owner.
+
+### HTTP Request
+
+`GET /fr/api/v1/user/houses`
