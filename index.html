@@ -241,6 +241,9 @@
                   <li>
                     <a href="#get-companies" class="toc-h2 toc-link" data-title="Get Companies">Get Companies</a>
                   </li>
+                  <li>
+                    <a href="#get-client-houses" class="toc-h2 toc-link" data-title="Get Client Houses">Get Client Houses</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -630,6 +633,32 @@ In this case, it will respond with the entire collection.</p>
 <p>This endpoint retrieves all the companies of the current user</p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>GET /fr/api/v1/user/companies</code></p>
+<h2 id='get-client-houses'>Get Client Houses</h2>
+<p><span class='badge badge-blue'>Paginated</span></p>
+
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3485"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"house"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mas des Anges"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bathrooms"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bedrooms"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"destinationId"</span><span class="p">:</span><span class="w"> </span><span class="mi">436</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"firstPhotoUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"production/uploads/photos/house-3485/2019-12-16-01f7de533067d924c6a4d82fd938ba47.jpeg"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all the houses if the current user is an owner.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET /fr/api/v1/user/houses</code></p>
 <h1 id='houses'>Houses</h1>
 <p>For all this endpoints, the <code>:identifier</code> can be the <code>id</code> or the localized <code>slug</code>.</p>
 
