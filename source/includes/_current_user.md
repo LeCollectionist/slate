@@ -133,7 +133,8 @@ This endpoint retrieves all the companies of the current user
 
 `GET /fr/api/v1/user/companies`
 
-## Get Client Houses
+
+## Get Owner's Houses
 <span class='badge badge-blue'>Paginated</span>
 
 > Response:
