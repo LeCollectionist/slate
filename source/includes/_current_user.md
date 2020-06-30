@@ -163,3 +163,64 @@ This endpoint retrieves all the houses if the current user is an owner.
 ### HTTP Request
 
 `GET /fr/api/v1/user/houses`
+
+
+## Post Owner's ICalendar
+<span class='badge badge-blue'>Paginated</span>
+
+> Response:
+
+```json
+{
+  "data": {
+    "id": "91",
+    "type": "calendarImport",
+    "attributes": {
+      "name": "my calendar",
+      "url": "www.jejeje.com",
+      "houseId": 1799
+    }
+  }
+}
+```
+
+This endpoint creates the booking from an ICalendar
+
+### HTTP Request
+
+`POST (fr;en)/api/v1/user/houses/:house_id/calendar_imports`
+
+*: Mandatory
+
+### Query Parameters
+
+Parameter | Description | Type | Example
+--------- | ----------- | ---- | -------
+*calendar_import[name] | Name of the calendar (20 characters max)| String | My Calendar
+*calendar_import[url] | Url of the calendar | String | wwww.mycalendar.com
+
+
+## Get Owner's ICalendar
+<span class='badge badge-blue'>Paginated</span>
+
+> Response:
+
+```json
+{
+  "data": {
+    "id": "90",
+    "type": "calendarImport",
+    "attributes": {
+      "name": "my calendar",
+      "url": "www.jejeje.com",
+      "houseId": 3485
+    }
+  }
+}
+```
+
+This endpoint get url from an ICalendar
+
+### HTTP Request
+
+`GET (fr;en)/api/v1/user/houses/:house_id/calendar_imports`
