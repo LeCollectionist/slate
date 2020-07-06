@@ -233,6 +233,9 @@
             <a href="#current-user" class="toc-h1 toc-link" data-title="Current User">Current User</a>
               <ul class="toc-list-h2">
                   <li>
+                    <a href="#informations" class="toc-h2 toc-link" data-title="Informations">Informations</a>
+                  </li>
+                  <li>
                     <a href="#get-client-contracts" class="toc-h2 toc-link" data-title="Get Client Contracts">Get Client Contracts</a>
                   </li>
                   <li>
@@ -243,6 +246,9 @@
                   </li>
                   <li>
                     <a href="#get-owner-39-s-houses" class="toc-h2 toc-link" data-title="Get Owner's Houses">Get Owner's Houses</a>
+                  </li>
+                  <li>
+                    <a href="#get-owner-39-s-houses-bookings" class="toc-h2 toc-link" data-title="Get Owner's houses bookings">Get Owner's houses bookings</a>
                   </li>
                   <li>
                     <a href="#post-owner-39-s-icalendar" class="toc-h2 toc-link" data-title="Post Owner's ICalendar">Post Owner's ICalendar</a>
@@ -523,6 +529,126 @@ In this case, it will respond with the entire collection.</p>
 <p>All those endpoints retrieves resources of the current user.</p>
 
 <p>The user is logged in by the authentication headers.</p>
+<h2 id='informations'>Informations</h2>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"234"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"birthdate"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"clientGeneralRentalConditionSigned"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-09T11:49:37.846+02:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"julien@viviani.fr"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Julien"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pardo"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"gender"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"locale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"nationality"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ownerGeneralRentalConditionSigned"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"postalCode"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"secondaryEmail"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"secondaryPhone"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-06T17:53:00.072+02:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"hasHouses"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"hasCompanies"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint updates the profile informations of the current user</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>PUT (fr;en)/api/v1/user/informations</code></p>
+
+<p>*: Mandatory</p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user[address]</td>
+<td>Address of the user</td>
+<td>String</td>
+<td>128 Rue de provence</td>
+</tr>
+<tr>
+<td>user[birthdate]</td>
+<td>Birthdate of the user</td>
+<td>Date</td>
+<td>1998-07-13</td>
+</tr>
+<tr>
+<td>user[city]</td>
+<td>City of the user</td>
+<td>String</td>
+<td>Paris</td>
+</tr>
+<tr>
+<td>user[country]</td>
+<td>Country of the user</td>
+<td>String (alpha2 country code)</td>
+<td>FR</td>
+</tr>
+<tr>
+<td>user[first_name]</td>
+<td>First name of the user</td>
+<td>String</td>
+<td>Julien</td>
+</tr>
+<tr>
+<td>user[gender]</td>
+<td>Gender of the user</td>
+<td>String (male/female/unknown)</td>
+<td>male</td>
+</tr>
+<tr>
+<td>user[last_name]</td>
+<td>Last name of the user</td>
+<td>String</td>
+<td>Viviani</td>
+</tr>
+<tr>
+<td>user[nationality]</td>
+<td>Nationality of the user</td>
+<td>String (alpha2 country code)</td>
+<td>FR</td>
+</tr>
+<tr>
+<td>user[phone]</td>
+<td>Phone of the user</td>
+<td>String</td>
+<td>0123456789</td>
+</tr>
+<tr>
+<td>user[postal_code]</td>
+<td>Zip code of the user</td>
+<td>String</td>
+<td>75008</td>
+</tr>
+<tr>
+<td>user[secondary_email]</td>
+<td>Secondary email of the user</td>
+<td>String</td>
+<td>julien@viviani.fr</td>
+</tr>
+<tr>
+<td>user[secondary_phone]</td>
+<td>Secondary phone of the user</td>
+<td>String</td>
+<td>0123456788</td>
+</tr>
+</tbody></table>
 <h2 id='get-client-contracts'>Get Client Contracts</h2>
 <p><span class='badge badge-blue'>Paginated</span></p>
 
@@ -557,7 +683,7 @@ In this case, it will respond with the entire collection.</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all the contracts as client of the current user.</p>
-<h3 id='http-request'>HTTP Request</h3>
+<h3 id='http-request-2'>HTTP Request</h3>
 <p><code>GET /fr/api/v1/user/client_contracts</code></p>
 <h2 id='get-owner-contracts'>Get Owner Contracts</h2>
 <p><span class='badge badge-blue'>Paginated</span></p>
@@ -593,7 +719,7 @@ In this case, it will respond with the entire collection.</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all the contracts as owner of the current user.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
+<h3 id='http-request-3'>HTTP Request</h3>
 <p><code>GET /fr/api/v1/user/owner_contracts</code></p>
 <h2 id='get-companies'>Get Companies</h2>
 <p><span class='badge badge-blue'>Paginated</span></p>
@@ -637,7 +763,7 @@ In this case, it will respond with the entire collection.</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all the companies of the current user</p>
-<h3 id='http-request-3'>HTTP Request</h3>
+<h3 id='http-request-4'>HTTP Request</h3>
 <p><code>GET /fr/api/v1/user/companies</code></p>
 <h2 id='get-owner-39-s-houses'>Get Owner&#39;s Houses</h2>
 <p><span class='badge badge-blue'>Paginated</span></p>
@@ -663,8 +789,57 @@ In this case, it will respond with the entire collection.</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all the houses if the current user is an owner.</p>
-<h3 id='http-request-4'>HTTP Request</h3>
+<h3 id='http-request-5'>HTTP Request</h3>
 <p><code>GET /fr/api/v1/user/houses</code></p>
+<h2 id='get-owner-39-s-houses-bookings'>Get Owner&#39;s houses bookings</h2>
+<p><span class='badge badge-blue'>Paginated</span></p>
+
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1237135"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"booking"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"checkInDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-01"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"checkOutDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-31"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"checkInTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"checkOutTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"current_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"per_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"prev_page"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all the bookings of one of the current user house</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>GET (fr;en)/api/v1/user/houses/:house_id/bookings?start_date=2020-01-01</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>start_date</td>
+<td>Date of the bookings</td>
+<td>Date</td>
+<td>2020-01-01</td>
+</tr>
+</tbody></table>
 <h2 id='post-owner-39-s-icalendar'>Post Owner&#39;s ICalendar</h2>
 <p><span class='badge badge-blue'>Paginated</span></p>
 
@@ -684,11 +859,11 @@ In this case, it will respond with the entire collection.</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint creates the booking from an ICalendar</p>
-<h3 id='http-request-5'>HTTP Request</h3>
+<h3 id='http-request-7'>HTTP Request</h3>
 <p><code>POST (fr;en)/api/v1/user/houses/:house_id/calendar_imports</code></p>
 
 <p>*: Mandatory</p>
-<h3 id='query-parameters'>Query Parameters</h3>
+<h3 id='query-parameters-3'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -729,7 +904,7 @@ In this case, it will respond with the entire collection.</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint get url from an ICalendar</p>
-<h3 id='http-request-6'>HTTP Request</h3>
+<h3 id='http-request-8'>HTTP Request</h3>
 <p><code>GET (fr;en)/api/v1/user/houses/:house_id/calendar_imports</code></p>
 <h1 id='houses'>Houses</h1>
 <p>For all this endpoints, the <code>:identifier</code> can be the <code>id</code> or the localized <code>slug</code>.</p>
