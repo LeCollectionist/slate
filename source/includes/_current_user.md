@@ -4,6 +4,66 @@ All those endpoints retrieves resources of the current user.
 
 The user is logged in by the authentication headers.
 
+## PUT Informations
+
+> Response:
+
+```json
+{
+  "data": {
+    "id": "234",
+    "type": "user",
+    "attributes": {
+      "address": null,
+      "birthdate": null,
+      "city": null,
+      "clientGeneralRentalConditionSigned": false,
+      "country": null,
+      "createdAt": "2020-04-09T11:49:37.846+02:00",
+      "email": "julien@viviani.fr",
+      "firstName": "Julien",
+      "lastName": "pardo",
+      "gender": null,
+      "locale": "fr",
+      "nationality": null,
+      "ownerGeneralRentalConditionSigned": false,
+      "phone": null,
+      "postalCode": null,
+      "secondaryEmail": null,
+      "secondaryPhone": null,
+      "updatedAt": "2020-07-06T17:53:00.072+02:00",
+      "hasHouses": true,
+      "hasCompanies": false
+    }
+  }
+}
+```
+
+This endpoint updates the profile informations of the current user
+
+### HTTP Request
+
+`PUT (fr;en)/api/v1/user/informations`
+
+*: Mandatory
+
+### Query Parameters
+
+Parameter | Description | Type | Example
+--------- | ----------- | ---- | -------
+user[address] | Address of the user | String | 128 Rue de provence
+user[birthdate] | Birthdate of the user | Date | 1998-07-13
+user[city] | City of the user | String | Paris
+user[country] | Country of the user | String (alpha2 country code) | FR
+user[first_name] | First name of the user | String | Julien
+user[gender] | Gender of the user | String (male/female/unknown) | male
+user[last_name] | Last name of the user | String | Viviani
+user[nationality] | Nationality of the user | String (alpha2 country code) | FR
+user[phone] | Phone of the user | String | 0123456789
+user[postal_code] | Zip code of the user | String | 75008
+user[secondary_email] | Secondary email of the user | String | julien@viviani.fr
+user[secondary_phone] | Secondary phone of the user | String | 0123456788
+
 ## Get Client Contracts
 <span class='badge badge-blue'>Paginated</span>
 
