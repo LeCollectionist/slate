@@ -165,6 +165,48 @@ This endpoint retrieves all the houses if the current user is an owner.
 `GET /fr/api/v1/user/houses`
 
 
+## Get Owner's houses bookings
+<span class='badge badge-blue'>Paginated</span>
+
+> Response:
+
+```json
+{
+  "data": [
+    {
+      "id": "1237135",
+      "type": "booking",
+      "attributes": {
+        "checkInDate": "2020-07-01",
+        "checkOutDate": "2020-07-31",
+        "checkInTime": 17,
+        "checkOutTime": 10,
+        "type": "admin"
+      }
+    }
+  ],
+  "meta": {
+    "current_page": 1,
+    "next_page": null,
+    "per_page": 25,
+    "prev_page": null,
+    "total_pages": 1,
+    "total_count": 1
+  }
+}
+```
+
+This endpoint retrieves all the bookings of one of the current user house
+
+### HTTP Request
+`GET (fr;en)/api/v1/user/houses/:house_id/bookings?start_date=2020-01-01`
+
+### Query Parameters
+
+Parameter | Description | Type | Example
+--------- | ----------- | ---- | -------
+start_date | Date of the bookings | Date | 2020-01-01
+
 ## Post Owner's ICalendar
 <span class='badge badge-blue'>Paginated</span>
 
@@ -198,7 +240,6 @@ Parameter | Description | Type | Example
 --------- | ----------- | ---- | -------
 *calendar_import[name] | Name of the calendar (20 characters max)| String | My Calendar
 *calendar_import[url] | Url of the calendar | String | wwww.mycalendar.com
-
 
 ## Get Owner's ICalendar
 <span class='badge badge-blue'>Paginated</span>
