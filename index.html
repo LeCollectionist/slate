@@ -888,24 +888,11 @@ In this case, it will respond with the entire collection.</p>
 <h2 id='get-owner-39-s-icalendar'>Get Owner&#39;s ICalendar</h2>
 <p><span class='badge badge-blue'>Paginated</span></p>
 
-<blockquote>
-<p>Response:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"90"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calendarImport"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my calendar"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"www.jejeje.com"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"houseId"</span><span class="p">:</span><span class="w"> </span><span class="mi">3485</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint get url from an ICalendar</p>
-<h3 id='http-request-8'>HTTP Request</h3>
-<p><code>GET (fr;en)/api/v1/user/houses/:house_id/calendar_imports</code></p>
+<p>by opening a new tab with this url, the ical should download in the navigator </p>
+
+<p>This endpoint get from an ICalendar</p>
+<h3 id='url'>URL</h3>
+<p><code>/api/v1/user/houses/:house_id/calendar_imports&amp;access-token=:user_access_token&amp;token-type=Bearer&amp;client=:user_client&amp;uid=:user_email</code></p>
 <h1 id='houses'>Houses</h1>
 <p>For all this endpoints, the <code>:identifier</code> can be the <code>id</code> or the localized <code>slug</code>.</p>
 
