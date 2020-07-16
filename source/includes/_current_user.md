@@ -304,24 +304,10 @@ Parameter | Description | Type | Example
 ## Get Owner's ICalendar
 <span class='badge badge-blue'>Paginated</span>
 
-> Response:
+by opening a new tab with this url, the ical should download in the navigator 
 
-```json
-{
-  "data": {
-    "id": "90",
-    "type": "calendarImport",
-    "attributes": {
-      "name": "my calendar",
-      "url": "www.jejeje.com",
-      "houseId": 3485
-    }
-  }
-}
-```
+This endpoint get from an ICalendar
 
-This endpoint get url from an ICalendar
+### URL
 
-### HTTP Request
-
-`GET (fr;en)/api/v1/user/houses/:house_id/calendar_imports`
+`/api/v1/user/houses/:house_id/calendar_imports&access-token=:user_access_token&token-type=Bearer&client=:user_client&uid=:user_email`
