@@ -306,8 +306,6 @@ Parameter | Description | Type | Example
 
 by opening a new tab with this url, the ical should download in the navigator 
 
-This endpoint get from an ICalendar
-
 ### URL
 
-`/api/v1/user/houses/:house_id/calendar_imports&access-token=:user_access_token&token-type=Bearer&client=:user_client&uid=:user_email`
+`/api/v1/user/houses/:house_id/calendar_imports` (with user's access tokens)
