@@ -96,7 +96,7 @@ user[secondary_phone] | Secondary phone of the user | String | 0123456788
       "id": "4476",
       "type": "clientContract",
       "attributes": {
-        "clientProcedureYousignToken": null,
+        "clientProcedureYousignToken": "/members/1218b86c-bb6b-4cc3-afac-e17d88b53791",
         "contract": {
           "id": "4476",
           "type": "contract",
@@ -142,7 +142,7 @@ This endpoint retrieves all the contracts as client of the current user.
     "id": "5215",
     "type": "ownerContract",
     "attributes": {
-      "ownerProcedureYousignToken": null,
+      "ownerProcedureYousignToken": "/members/1218b86c-bb6b-4cc3-afac-e17d88b53791",
       "contract": {
         "id": "5215",
         "type": "contract",
@@ -179,7 +179,7 @@ This endpoint retrieves all the contracts as owner of the current user.
     "id": "5215",
     "type": "clientContract",
     "attributes": {
-      "clientProcedureYousignToken": null,
+      "clientProcedureYousignToken": "/members/1218b86c-bb6b-4cc3-afac-e17d88b53791",
       "contract": {
         "id": "5215",
         "type": "contract",
