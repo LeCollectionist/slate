@@ -73,18 +73,44 @@ user[secondary_phone] | Secondary phone of the user | String | 0123456788
 {
   "data": [
     {
-      "id": "3970",
-      "type": "contract",
+      "id": "5215",
+      "type": "clientContract",
       "attributes": {
-        "checkInDate": "2020-05-20",
-        "checkInTime": "17:00",
-        "checkOutDate": "2020-05-28",
-        "checkOutTime": "10:00",
-        "houseName": "Villa Lumière",
-        "houseOldName": "the two sisters",
-        "destinationName": "Gordes & alentours"
+        "clientProcedureYousignToken": null,
+        "contract": {
+          "id": "5215",
+          "type": "contract",
+          "attributes": {
+            "checkInDate": "2020-08-17",
+            "checkInTime": "11:00",
+            "checkOutDate": "2020-08-24",
+            "checkOutTime": "10:00",
+            "houseName": "Villa Notre Dame",
+            "houseOldName": "Villa Atlantide",
+            "destinationName": "Marseille"
+          }
+        }
       }
-    }
+    },
+    {
+      "id": "4476",
+      "type": "clientContract",
+      "attributes": {
+        "clientProcedureYousignToken": null,
+        "contract": {
+          "id": "4476",
+          "type": "contract",
+          "attributes": {
+            "checkInDate": "2021-08-15",
+            "checkInTime": "17:00",
+            "checkOutDate": "2021-08-22",
+            "checkOutTime": "10:00",
+            "houseName": "Villa Difolia",
+            "houseOldName": "Villa Amadei",
+            "destinationName": "Bonifacio"
+          }
+        }
+      }
     }
   ],
   "meta": {
@@ -93,7 +119,7 @@ user[secondary_phone] | Secondary phone of the user | String | 0123456788
     "per_page": 25,
     "prev_page": null,
     "total_pages": 1,
-    "total_count": 1
+    "total_count": 2
   }
 }
 ```
@@ -104,6 +130,81 @@ This endpoint retrieves all the contracts as client of the current user.
 
 `GET /fr/api/v1/user/client_contracts`
 
+
+## Get one Owner Contract
+<span class='badge badge-blue'>Paginated</span>
+
+> Response:
+
+```json
+{
+  "data": {
+    "id": "5215",
+    "type": "ownerContract",
+    "attributes": {
+      "ownerProcedureYousignToken": null,
+      "contract": {
+        "id": "5215",
+        "type": "contract",
+        "attributes": {
+          "checkInDate": "2020-08-17",
+          "checkInTime": "11:00",
+          "checkOutDate": "2020-08-24",
+          "checkOutTime": "10:00",
+          "houseName": "Villa Notre Dame",
+          "houseOldName": "Villa Atlantide",
+          "destinationName": "Marseille"
+        }
+      }
+    }
+  }
+}
+```
+
+This endpoint retrieves all the contracts as owner of the current user.
+
+### HTTP Request
+
+`GET /fr/api/v1/user/owner_contract/:contract_id`
+
+
+## Get one Client Contract
+<span class='badge badge-blue'>Paginated</span>
+
+> Response:
+
+```json
+{
+  "data": {
+    "id": "5215",
+    "type": "clientContract",
+    "attributes": {
+      "clientProcedureYousignToken": null,
+      "contract": {
+        "id": "5215",
+        "type": "contract",
+        "attributes": {
+          "checkInDate": "2020-08-17",
+          "checkInTime": "11:00",
+          "checkOutDate": "2020-08-24",
+          "checkOutTime": "10:00",
+          "houseName": "Villa Notre Dame",
+          "houseOldName": "Villa Atlantide",
+          "destinationName": "Marseille"
+        }
+      }
+    }
+  }
+}
+```
+
+This endpoint retrieves all the contracts as owner of the current user.
+
+### HTTP Request
+
+`GET /fr/api/v1/user/owner_contract/:contract_id`
+
+
 ## Get Owner Contracts
 <span class='badge badge-blue'>Paginated</span>
 
@@ -113,18 +214,44 @@ This endpoint retrieves all the contracts as client of the current user.
 {
   "data": [
     {
-      "id": "3970",
-      "type": "contract",
+      "id": "5215",
+      "type": "ownerContract",
       "attributes": {
-        "checkInDate": "2020-05-20",
-        "checkInTime": "17:00",
-        "checkOutDate": "2020-05-28",
-        "checkOutTime": "10:00",
-        "houseName": "Villa Lumière",
-        "houseOldName": "the two sisters",
-        "destinationName": "Gordes & alentours"
+        "ownerProcedureYousignToken": null,
+        "contract": {
+          "id": "5215",
+          "type": "contract",
+          "attributes": {
+            "checkInDate": "2020-08-17",
+            "checkInTime": "11:00",
+            "checkOutDate": "2020-08-24",
+            "checkOutTime": "10:00",
+            "houseName": "Villa Notre Dame",
+            "houseOldName": "Villa Atlantide",
+            "destinationName": "Marseille"
+          }
+        }
       }
-    }
+    },
+    {
+      "id": "4476",
+      "type": "ownerContract",
+      "attributes": {
+        "ownerProcedureYousignToken": "/members/1218b86c-bb6b-4cc3-afac-e17d88b53791",
+        "contract": {
+          "id": "4476",
+          "type": "contract",
+          "attributes": {
+            "checkInDate": "2021-08-15",
+            "checkInTime": "17:00",
+            "checkOutDate": "2021-08-22",
+            "checkOutTime": "10:00",
+            "houseName": "Villa Difolia",
+            "houseOldName": "Villa Amadei",
+            "destinationName": "Bonifacio"
+          }
+        }
+      }
     }
   ],
   "meta": {
@@ -133,7 +260,7 @@ This endpoint retrieves all the contracts as client of the current user.
     "per_page": 25,
     "prev_page": null,
     "total_pages": 1,
-    "total_count": 1
+    "total_count": 2
   }
 }
 ```
