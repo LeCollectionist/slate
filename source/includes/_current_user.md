@@ -165,7 +165,7 @@ This endpoint retrieves all the contracts as owner of the current user.
 
 ### HTTP Request
 
-`GET /fr/api/v1/user/owner_contract/:contract_id`
+`GET /fr/api/v1/user/owner_contracts/:contract_id`
 
 
 ## Get one Client Contract
@@ -202,7 +202,7 @@ This endpoint retrieves all the contracts as owner of the current user.
 
 ### HTTP Request
 
-`GET /fr/api/v1/user/owner_contract/:contract_id`
+`GET /fr/api/v1/user/owner_contracts/:contract_id`
 
 
 ## Get Owner Contracts
