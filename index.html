@@ -260,7 +260,7 @@
                     <a href="#post-owner-39-s-icalendar" class="toc-h2 toc-link" data-title="Post Owner's ICalendar">Post Owner's ICalendar</a>
                   </li>
                   <li>
-                    <a href="#get-owner-39-s-icalendar" class="toc-h2 toc-link" data-title="Get Owner's ICalendar">Get Owner's ICalendar</a>
+                    <a href="#get-user-icalendar" class="toc-h2 toc-link" data-title="Get User Icalendar">Get User Icalendar</a>
                   </li>
               </ul>
           </li>
@@ -1007,12 +1007,27 @@ In this case, it will respond with the entire collection.</p>
 <td>wwww.mycalendar.com</td>
 </tr>
 </tbody></table>
-<h2 id='get-owner-39-s-icalendar'>Get Owner&#39;s ICalendar</h2>
+<h2 id='get-user-icalendar'>Get User Icalendar</h2>
 <p><span class='badge badge-blue'>Paginated</span></p>
 
-<p>by opening a new tab with this url, the ical should download in the navigator </p>
-<h3 id='url'>URL</h3>
-<p><code>/api/v1/user/houses/:house_id/calendar_imports</code> (with user&#39;s access tokens)</p>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3485"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calendarExport"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"localhost:5000/api/v1/houses/3485/calendars?house_ical_private_token=5a820866-ed70-4839-80fa-3d0a97f010bf"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves the url to display to the user. 
+This url is the url that Calendar Apps ask to add bookings in their system.
+The user can also enter this url his browser to downlad a ical formated calendar.</p>
+<h3 id='http-request-10'>HTTP Request</h3>
+<p>`GET fr/api/v1/user/houses/:house_id/calendar_exports</p>
 <h1 id='houses'>Houses</h1>
 <p>For all this endpoints, the <code>:identifier</code> can be the <code>id</code> or the localized <code>slug</code>.</p>
 
