@@ -428,11 +428,27 @@ Parameter | Description | Type | Example
 *calendar_import[name] | Name of the calendar (20 characters max)| String | My Calendar
 *calendar_import[url] | Url of the calendar | String | wwww.mycalendar.com
 
-## Get Owner's ICalendar
+## Get User Icalendar
 <span class='badge badge-blue'>Paginated</span>
 
-by opening a new tab with this url, the ical should download in the navigator 
+> Response:
 
-### URL
+```json
+{
+  "data": {
+    "id": "3485",
+    "type": "calendarExport",
+    "attributes": {
+      "url": "localhost:5000/api/v1/houses/3485/calendars?house_ical_private_token=5a820866-ed70-4839-80fa-3d0a97f010bf"
+    }
+  }
+}
+```
 
-`/api/v1/user/houses/:house_id/calendar_imports` (with user's access tokens)
+This endpoint retrieves the url to display to the user. 
+This url is the url that Calendar Apps ask to add bookings in their system.
+The user can also enter this url his browser to downlad a ical formated calendar.
+
+### HTTP Request
+
+`GET fr/api/v1/user/houses/:house_id/calendar_exports
